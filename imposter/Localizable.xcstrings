@@ -1,6 +1,21 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "🎮 Players" : {
+
+    },
+    "3-20 players" : {
+
+    },
+    "add player" : {
+
+    },
+    "Confirm" : {
+
+    },
+    "Edit Players" : {
+
+    },
     "en" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -18,7 +33,11 @@
         }
       }
     },
+    "Enter player name" : {
+
+    },
     "Hello" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ka" : {
           "stringUnit" : {
@@ -27,6 +46,9 @@
           }
         }
       }
+    },
+    "Imposter" : {
+
     },
     "ka" : {
       "extractionState" : "manual",

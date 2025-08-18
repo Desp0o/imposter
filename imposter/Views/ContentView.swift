@@ -25,14 +25,3 @@ struct ContentView: View {
 }
 
 
-struct Main: View {
-  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
-
-  var body: some View {
-    VStack {
-      Text("Hello")
-    }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(.mainBlack)
-  }
-}

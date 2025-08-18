@@ -1,0 +1,15 @@
+{
+  "originHash" : "5f8a76a4eaa77d439dae6f7903837717f3aba9e24b47d2199541e304650a4028",
+  "pins" : [
+    {
+      "identity" : "stackwrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Desp0o/StackWrapper.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "50a2f15ef9fec57aafe83a51f48994e4b078e88f"
+      }
+    }
+  ],
+  "version" : 3
+}

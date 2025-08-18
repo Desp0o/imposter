@@ -27,7 +27,7 @@ extension Text {
       .padding()
       .frame(maxWidth: .infinity)
       .frame(height: 42)
-      .background(.mainPink)
+      .background(color)
       .clipShape(RoundedRectangle(cornerRadius: 8))
   }
 }
