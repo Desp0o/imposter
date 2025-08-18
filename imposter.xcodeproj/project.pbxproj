@@ -343,7 +343,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Desp0o/StackWrapper.git";
 			requirement = {
-				branch = main;
+				branch = "bug-fix";
 				kind = branch;
 			};
 		};

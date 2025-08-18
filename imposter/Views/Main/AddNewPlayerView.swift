@@ -38,7 +38,7 @@ struct AddNewPlayerView: View {
           }
           .padding(8)
           .background(.mainGray)
-          .clipShape(RoundedRectangle(cornerRadius: 8))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
           .onTapGesture {
             if let index = playersData.firstIndex(of: player) {
               playersData.remove(at: index)
@@ -56,9 +56,9 @@ struct AddNewPlayerView: View {
           .frame(maxWidth: .infinity)
           .frame(height: 48)
           .foregroundStyle(.mainWhite)
-          .clipShape(RoundedRectangle(cornerRadius: 8))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
           .overlay {
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: 12)
               .stroke(.mainGray, lineWidth: 1)
           }
           .overlay {
@@ -97,7 +97,7 @@ struct AddNewPlayerView: View {
             .textCase(.uppercase)
             .frame(maxWidth: .infinity, maxHeight: 48)
             .overlay {
-              RoundedRectangle(cornerRadius: 8)
+              RoundedRectangle(cornerRadius: 12)
                 .stroke(.mainGray, lineWidth: 1)
             }
         }

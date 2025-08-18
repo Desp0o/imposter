@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Desp0o/StackWrapper.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "50a2f15ef9fec57aafe83a51f48994e4b078e88f"
+        "branch" : "bug-fix",
+        "revision" : "6441cd99368180521cf84617c39fdf2e105d846c"
       }
     }
   ],

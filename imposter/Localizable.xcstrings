@@ -1,7 +1,13 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld" : {
+
+    },
     "🎮 Players" : {
+
+    },
+    "🥷🏿 Imposters" : {
 
     },
     "3-20 players" : {
@@ -50,6 +56,9 @@
     "Imposter" : {
 
     },
+    "Imposters" : {
+
+    },
     "ka" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -71,6 +80,12 @@
 
     },
     "Lets Play Imposter!" : {
+
+    },
+    "Players" : {
+
+    },
+    "players quantity" : {
 
     },
     "rule_five" : {
