@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @AppStorage("isOnboardingCompleted") var isOnboardingCompleted: Bool = false
+  @State private var locale: Locale = .current
 
     var body: some View {
       if isOnboardingCompleted {
@@ -25,7 +26,13 @@ struct ContentView: View {
 
 
 struct Main: View {
+  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
+
   var body: some View {
-    Text("hello")
+    VStack {
+      Text("Hello")
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(.mainBlack)
   }
 }

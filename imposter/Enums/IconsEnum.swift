@@ -11,4 +11,6 @@ enum IconsEnum: String {
   case storefront
   case shippingbox
   case settings = "slider.horizontal.3"
+  case lightbulb
+  case arrow = "arrow.right"
 }

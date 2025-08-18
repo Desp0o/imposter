@@ -26,27 +26,28 @@ struct Tabbar: View {
       Main()
         .tabItem {
           Image(systemName: IconsEnum.gamecontroller.rawValue)
-          Text("Game")
+          Text("თამაში")
         }
       
       Main()
         .tabItem {
           Image(systemName: IconsEnum.storefront.rawValue)
-          Text("Store")
+          Text("მაღაზია")
         }
       
       Main()
         .tabItem {
           Image(systemName: IconsEnum.shippingbox.rawValue)
-          Text("Packs")
+          Text("პაკეტები")
         }
       
       Main()
         .tabItem {
           Image(systemName: IconsEnum.settings.rawValue)
-          Text("Settings")
+          Text("პარამეტრები")
         }
     }
+    .tint(.mainPink)
   }
 }
 
