@@ -10,11 +10,12 @@ import SwiftUI
 import StackWrapper
 
 struct Main: View {
-  @State private var isPlayersAddSheetVisible: Bool = false
-  @State private var playersQuantity: Int = 3
+  @State private var isLocalsAddSheetVisible: Bool = false
+  @State private var isImposterAddSheetVisible: Bool = false
+
+  @State private var localsQuantity: Int = 3
   @State private var impostersQuantity: Int = 1
   
-  @State private var playersData: [String] = []
   
   var body: some View {
     VStack(spacing: 20) {
@@ -23,13 +24,13 @@ struct Main: View {
       
       Spacer().frame(height: 10)
       
-      // MARK: - players
+      // MARK: - locals
       VStack(alignment: .leading, spacing: 20) {
         Text("🎮 Players")
           .customFontSytle(weight: .bold)
         
         HStack {
-          Text("\(playersQuantity)")
+          Text("\(localsQuantity)")
             .customFontSytle()
           
           Text("Players")
@@ -40,7 +41,7 @@ struct Main: View {
         .clipShape(RoundedRectangle(cornerRadius: 8))
       }
       .gameSettingsComponent {
-        isPlayersAddSheetVisible = true
+        isLocalsAddSheetVisible = true
       }
       
       // MARK: - imposter
@@ -60,41 +61,21 @@ struct Main: View {
         .clipShape(RoundedRectangle(cornerRadius: 8))
       }
       .gameSettingsComponent {
-        
+        isImposterAddSheetVisible = true
       }
       
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     .padding()
     .background(.mainBlack)
-    .sheet(isPresented: $isPlayersAddSheetVisible) {
-      VStack {
-        Picker("players quantity", selection: $playersQuantity) {
-          ForEach(3...32, id: \.self) { num in
-            Text("\(num)")
-              .customFontSytle(color: .mainPink, weight: .bold, size: 24)
-          }
-        }
-        .pickerStyle(.wheel)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
-        
-        Button {
-          isPlayersAddSheetVisible = false
-        } label: {
-          Text("Confirm")
-            .customFontSytle(color: .mainPink, weight: .bold)
-            .textCase(.uppercase)
-            .frame(maxWidth: .infinity, maxHeight: 48)
-            .overlay {
-              RoundedRectangle(cornerRadius: 12)
-                .stroke(.mainGray, lineWidth: 1)
-            }
-        }
-      }
-      .presentationDetents([.fraction(0.35)])
-      .padding()
-      .background(.mainBlack)
+    .sheet(isPresented: $isLocalsAddSheetVisible) {
+      LocalsCount(
+        localsQuantity: $localsQuantity,
+        isLocalsAddSheetVisible: $isLocalsAddSheetVisible
+      )
+    }
+    .sheet(isPresented: $isImposterAddSheetVisible) {
+      ImposterCount(isImposterAddSheetVisible: $isImposterAddSheetVisible, impostersQuantity: $impostersQuantity, localsQuantity: $localsQuantity)
     }
     .toolbar(.hidden, for: .tabBar)
   }

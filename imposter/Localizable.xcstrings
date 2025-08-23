@@ -10,16 +10,7 @@
     "🥷🏿 Imposters" : {
 
     },
-    "3-20 players" : {
-
-    },
-    "add player" : {
-
-    },
     "Confirm" : {
-
-    },
-    "Edit Players" : {
 
     },
     "en" : {
@@ -38,9 +29,6 @@
           }
         }
       }
-    },
-    "Enter player name" : {
-
     },
     "Hello" : {
       "extractionState" : "stale",
