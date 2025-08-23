@@ -9,7 +9,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "🎮 ლოკალები"
+            "value" : "🎮 მოთამაშეები"
           }
         }
       }
@@ -51,6 +51,9 @@
         }
       }
     },
+    "How to Play" : {
+
+    },
     "Imposter" : {
       "localizations" : {
         "ka" : {
@@ -88,32 +91,12 @@
         }
       }
     },
-    "languages" : {
-      "localizations" : {
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ენა"
-          }
-        }
-      }
-    },
-    "Lets Play Imposter!" : {
-      "localizations" : {
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "თამაშის წესები"
-          }
-        }
-      }
-    },
     "Players" : {
       "localizations" : {
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ლოკალი"
+            "value" : "მოთამაშე"
           }
         }
       }
@@ -123,190 +106,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ლოკალების რაოდენობა"
-          }
-        }
-      }
-    },
-    "rule_five" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If the imposter has an idea about the location, they can name it. If they are correct, the imposter wins. However, if they name a wrong place, the locals win."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "თუ ჯაშუში მიხვდება, თუ სად იმყოფებით, მას შეუძლია დაასახელოს ლოკაცია. თუ მისი ვარაუდი სწორია, ჯაშუში იგებს. თუმცა, თუ არასწორ ადგილს დაასახელებს, ადგილობრივები იმარჯვებენ."
-          }
-        }
-      }
-    },
-    "rule_four" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Have you all chosen the same person? They must reveal their role. If they are the imposter, the locals win, if they are a local, the spy wins. If you have pointed at different people, continue the game."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "თუ ყველამ ერთი და იგივე ადამიანი ამოირჩიეთ, მან თავისი როლი უნდა გაამჟღავნოს. თუ ის ჯაშუშია, ადგილობრივები იგებენ, ხოლო თუ ადგილობრივია — იმარჯვებს ჯაშუში. თუ სხვადასხვა ადამიანზე მიუთითეთ, გააგრძელეთ თამაში."
-          }
-        }
-      }
-    },
-    "rule_one" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "There are locals and an imposter. To determine your roles, pass the phone around. All the locals will see the location, while the imposter will not."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "თამაშში მონაწილეობენ ადგილობრივები და ერთი ჯაშუში. თქვენი როლების გასარკვევად, მოატარეთ ტელეფონი. ყველა ადგილობრივი დაინახავს ლოკაციას, ჯაშუში კი – ვერა."
-          }
-        }
-      }
-    },
-    "rule_seven" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Don’t forget about time! The clock is ticking, so hurry up! In the new game, the first person to ask a question is the spy from the previous game."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "არ დაგავიწყდეთ დრო! საათი მუშაობს, ამიტომ იჩქარეთ! \n\nახალ თამაშში პირველ კითხვას წინა თამაშის ჯაშუში სვამს.\n"
-          }
-        }
-      }
-    },
-    "rule_six" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If you have a guess about who the imposter is, say, “I know which one of you is the imposter”.\nOn the count of three Everyone should then point at someone they believe is likely to be the imposter."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "თუ მიხვდებით, ვინ არის ჯაშუში, თქვით: „მე ვიცი, თქვენ შორის ვინ არის ჯაშუში“. \n\nსამამდე დათვლის შემდეგ, ყველა ერთდროულად უთითებს მას, ვინც ჯაშუში ჰგონია."
-          }
-        }
-      }
-    },
-    "rule_three" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Listen to the other players’ answers: the imposter doesn’t know the location, so their answers might be inaccurate."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ყურადღებით მოუსმინეთ სხვა მოთამაშეების პასუხებს: ჯაშუშმა არ იცის ლოკაცია, ამიტომ მისი პასუხები, შესაძლოა, არაზუსტი იყოს."
-          }
-        }
-      }
-    },
-    "rule_two" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ask each other questions related to the location. For instance, you could ask, “When have you last been to this place?” After someone answers, it’s their turn to ask a question."
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "დაუსვით ერთმანეთს ლოკაციასთან დაკავშირებული კითხვები. \n მაგალითად, შეგიძლიათ იკითხოთ: „ბოლოს როდის იყავი ამ ადგილას?“ მას შემდეგ, რაც მოთამაშე პასუხს დაასრულებს, მისი ჯერი დგება, დასვას კითხვა."
-          }
-        }
-      }
-    },
-    "თამაში" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Game"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "თამაში"
-          }
-        }
-      }
-    },
-    "მაღაზია" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shop"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "მაღაზია"
-          }
-        }
-      }
-    },
-    "პაკეტები" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Packs"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "პაკეტები"
-          }
-        }
-      }
-    },
-    "პარამეტრები" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "პარამეტრები"
+            "value" : "მოთამაშეების რაოდენობა"
           }
         }
       }

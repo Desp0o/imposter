@@ -13,7 +13,7 @@ struct imposterApp: App {
 
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      Main()
         .background(.mainBlack)
         .environment(\.locale, Locale(identifier: appLanguage.rawValue))
     }
