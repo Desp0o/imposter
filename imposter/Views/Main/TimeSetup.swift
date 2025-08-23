@@ -1,19 +1,20 @@
 //
-//  LocalsCount.swift
+//  TimeSetup.swift
 //  imposter
 //
 //  Created by Tornike Despotashvili on 8/23/25.
 //
 
+
 import SwiftUI
 
-struct LocalsCount: View {
-  @Binding var localsQuantity: Int
-  @Binding var isLocalsAddSheetVisible: Bool
+struct TimeSetup: View {
+  @Binding var timeAmount: Int
+  @Binding var isTimeSheetVisible: Bool
   
   var body: some View {
     VStack {
-      Picker("players quantity", selection: $localsQuantity) {
+      Picker("time amount", selection: $timeAmount) {
         ForEach(3...10, id: \.self) { num in
           Text("\(num)")
             .customFontSytle(color: .mainPink, weight: .bold, size: 24)
@@ -23,7 +24,7 @@ struct LocalsCount: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       
       Button {
-        isLocalsAddSheetVisible = false
+        isTimeSheetVisible = false
       } label: {
         Text("Confirm")
           .customFontSytle(color: .mainPink, weight: .bold)

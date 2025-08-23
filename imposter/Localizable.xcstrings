@@ -1,8 +1,21 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld" : {
 
+    },
+    "⏰ Time Limit" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⏰ დრო"
+          }
+        }
+      }
     },
     "🎮 Players" : {
       "localizations" : {
@@ -30,6 +43,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "დადასტურება"
+          }
+        }
+      }
+    },
+    "Disabled" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამორთული"
           }
         }
       }
@@ -98,6 +121,16 @@
         }
       }
     },
+    "Minutes" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წუთო"
+          }
+        }
+      }
+    },
     "Players" : {
       "localizations" : {
         "ka" : {
@@ -117,6 +150,9 @@
           }
         }
       }
+    },
+    "time amount" : {
+
     }
   },
   "version" : "1.0"
