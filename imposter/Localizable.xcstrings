@@ -5,13 +5,34 @@
 
     },
     "🎮 Players" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎮 ლოკალები"
+          }
+        }
+      }
     },
     "🥷🏿 Imposters" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🥷🏿 ჯაშუშები"
+          }
+        }
+      }
     },
     "Confirm" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დადასტურება"
+          }
+        }
+      }
     },
     "en" : {
       "extractionState" : "manual",
@@ -30,22 +51,25 @@
         }
       }
     },
-    "Hello" : {
-      "extractionState" : "stale",
+    "Imposter" : {
       "localizations" : {
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "გამარჯობა"
+            "value" : "ჯაშუში"
           }
         }
       }
     },
-    "Imposter" : {
-
-    },
     "Imposters" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ჯაშუში"
+          }
+        }
+      }
     },
     "ka" : {
       "extractionState" : "manual",
@@ -58,23 +82,51 @@
         },
         "ka" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "ქართული"
           }
         }
       }
     },
     "languages" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ენა"
+          }
+        }
+      }
     },
     "Lets Play Imposter!" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თამაშის წესები"
+          }
+        }
+      }
     },
     "Players" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ლოკალი"
+          }
+        }
+      }
     },
     "players quantity" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ლოკალების რაოდენობა"
+          }
+        }
+      }
     },
     "rule_five" : {
       "extractionState" : "manual",

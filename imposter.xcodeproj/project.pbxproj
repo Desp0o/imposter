@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		ACBEC81C2E53342D00308FAB /* StackWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = ACBEC81B2E53342D00308FAB /* StackWrapper */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		AC78CB7C2E525ECF007DAAD2 /* imposter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imposter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -27,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBEC81C2E53342D00308FAB /* StackWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +65,6 @@
 			);
 			name = imposter;
 			packageProductDependencies = (
-				ACBEC81B2E53342D00308FAB /* StackWrapper */,
 			);
 			productName = imposter;
 			productReference = AC78CB7C2E525ECF007DAAD2 /* imposter.app */;
@@ -103,7 +97,6 @@
 			mainGroup = AC78CB732E525ECF007DAAD2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				ACBEC81A2E53342D00308FAB /* XCRemoteSwiftPackageReference "StackWrapper" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AC78CB7D2E525ECF007DAAD2 /* Products */;
@@ -337,25 +330,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		ACBEC81A2E53342D00308FAB /* XCRemoteSwiftPackageReference "StackWrapper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Desp0o/StackWrapper.git";
-			requirement = {
-				branch = "bug-fix";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		ACBEC81B2E53342D00308FAB /* StackWrapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ACBEC81A2E53342D00308FAB /* XCRemoteSwiftPackageReference "StackWrapper" */;
-			productName = StackWrapper;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC78CB742E525ECF007DAAD2 /* Project object */;
 }

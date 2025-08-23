@@ -16,7 +16,6 @@ struct Main: View {
   @State private var localsQuantity: Int = 3
   @State private var impostersQuantity: Int = 1
   
-  
   var body: some View {
     VStack(spacing: 20) {
       Text("Imposter")
@@ -45,7 +44,7 @@ struct Main: View {
       }
       
       // MARK: - imposter
-      VStack {
+      VStack(alignment: .leading, spacing: 20) {
         Text("🥷🏿 Imposters")
           .customFontSytle(weight: .bold)
         
