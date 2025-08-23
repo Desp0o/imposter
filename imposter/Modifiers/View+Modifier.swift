@@ -23,3 +23,12 @@ extension View {
     }
   }
 }
+
+extension View {
+  func componetnTextBackground() -> some View {
+    self
+    .padding(8)
+    .background(.mainBlack)
+    .clipShape(RoundedRectangle(cornerRadius: 8))
+  }
+}

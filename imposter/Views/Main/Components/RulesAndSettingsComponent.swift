@@ -20,7 +20,7 @@ struct RulesAndSettingsComponent: View {
           .resizable()
           .scaledToFit()
           .frame(width: 24, height: 24)
-          .foregroundStyle(.mainPink)
+          .foregroundStyle(.mainGray)
           .padding(.vertical)
           .padding(.trailing, 10)
       }
@@ -34,7 +34,7 @@ struct RulesAndSettingsComponent: View {
           .resizable()
           .scaledToFit()
           .frame(width: 24, height: 24)
-          .foregroundStyle(.mainPink)
+          .foregroundStyle(.mainGray)
           .padding(.vertical)
           .padding(.trailing, 10)
       }

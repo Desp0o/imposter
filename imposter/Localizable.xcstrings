@@ -8,6 +8,7 @@
 
     },
     "⏰ Time Limit" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ka" : {
           "stringUnit" : {
@@ -73,6 +74,9 @@
           }
         }
       }
+    },
+    "Give imposter a hint about the word to help them blend in better" : {
+
     },
     "How to Play" : {
       "localizations" : {
