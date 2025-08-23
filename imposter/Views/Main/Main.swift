@@ -15,6 +15,7 @@ struct Main: View {
   @State private var isRulesSheetVisible: Bool = false
   @State private var isTimeLimitEnabled: Bool = false
   @State private var isTimeSheetVisible: Bool = false
+  @State private var isHintEnabled: Bool = false
   
   @State private var localsQuantity: Int = 3
   @State private var impostersQuantity: Int = 1
@@ -72,7 +73,7 @@ struct Main: View {
         .gameSettingsComponent {
           isImposterAddSheetVisible = true
         }
-       
+        
         
         // MARK: - time limit
         VStack(alignment: .leading, spacing: 20) {
@@ -103,7 +104,22 @@ struct Main: View {
           }
         }
         
-        
+        VStack(alignment: .leading, spacing: 20) {
+          TogglerCustomComponent(title: "💡 Imposter Hint", value: $isHintEnabled)
+          
+          
+          HStack {
+            Text("Give imposter a hint about the word to help them blend in better")
+              .customFontSytle()
+          }
+          .padding(8)
+          .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+        .gameSettingsComponent {
+          if isTimeLimitEnabled {
+            isTimeSheetVisible = true
+          }
+        }
         
       }
       .sheet(isPresented: $isLocalsAddSheetVisible) {
@@ -141,7 +157,7 @@ struct TogglerCustomComponent: View {
       Text(title)
         .customFontSytle(weight: .bold)
       
-    Toggle("", isOn: $value)
+      Toggle("", isOn: $value)
         .tint(.mainPink)
     }
   }
