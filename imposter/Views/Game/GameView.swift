@@ -19,6 +19,10 @@ struct GameView: View {
         Button("delete") {
           catManager.categories[0].data.remove(at: 0)
         }
+        
+        Button("godbless") {
+          catManager.generateRandomWord()
+        }
       }
     }
 }
