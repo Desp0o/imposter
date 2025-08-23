@@ -52,14 +52,21 @@
       }
     },
     "How to Play" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "წესები"
+          }
+        }
+      }
     },
     "Imposter" : {
       "localizations" : {
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ჯაშუში"
+            "value" : "Imposter"
           }
         }
       }
