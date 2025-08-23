@@ -18,12 +18,25 @@
         }
       }
     },
+    "⭐️" : {
+
+    },
     "🎮 Players" : {
       "localizations" : {
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "🎮 მოთამაშეები"
+          }
+        }
+      }
+    },
+    "🏷️ Category" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🏷️ კატეგორიები"
           }
         }
       }
@@ -38,6 +51,16 @@
         }
       }
     },
+    "Choose Category" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აირჩიეთ კატეგორიები"
+          }
+        }
+      }
+    },
     "Confirm" : {
       "localizations" : {
         "ka" : {
@@ -47,6 +70,9 @@
           }
         }
       }
+    },
+    "delete" : {
+
     },
     "Disabled" : {
       "localizations" : {
@@ -130,7 +156,17 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "წუთო"
+            "value" : "წუთი"
+          }
+        }
+      }
+    },
+    "Play" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თამაში"
           }
         }
       }
@@ -154,6 +190,9 @@
           }
         }
       }
+    },
+    "print" : {
+
     },
     "time amount" : {
 

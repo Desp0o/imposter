@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct CategoryView: View {
+  @Environment(CategoryManager.self) private var catManager
   @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
-  @Binding var categoryList: [CategoryModel]
   @Binding var isCategorySheetVisible: Bool
   
   var body: some View {
@@ -24,7 +24,7 @@ struct CategoryView: View {
             HStack {
               Text(appLanguage == .ka ? category.nameGeo : category.nameEng)
                 .customFontSytle(
-                  color: categoryList.contains(category)
+                  color: catManager.categories.contains(category)
                   ? .mainBlack : .mainWhite,
                   weight: .semibold
                 )
@@ -32,7 +32,7 @@ struct CategoryView: View {
               Spacer()
             }
             .padding()
-            .background(categoryList.contains(category) ? .mainPink : .clear)
+            .background(catManager.categories.contains(category) ? .mainPink : .clear)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay {
               RoundedRectangle(cornerRadius: 8)
@@ -40,14 +40,14 @@ struct CategoryView: View {
             }
             .contentShape(Rectangle())
             .onTapGesture {
-              if !categoryList.contains(category) {
+              if !catManager.categories.contains(category) {
                 withAnimation(.smooth) {
-                  categoryList.append(category)
+                  catManager.categories.append(category)
                 }
               } else {
                 withAnimation(.smooth) {
-                  guard categoryList.count > 1 else { return }
-                  categoryList.removeAll { category.id == $0.id }
+                  guard catManager.categories.count > 1 else { return }
+                  catManager.categories.removeAll { category.id == $0.id }
                 }
               }
             }

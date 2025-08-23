@@ -9,5 +9,5 @@ struct CategoryModel: Identifiable, Equatable {
   let id: Int
   let nameEng: String
   let nameGeo: String
-  let data: [WordModel]
+  var data: [WordModel]
 }
