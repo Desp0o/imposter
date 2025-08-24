@@ -64,9 +64,6 @@
         }
       }
     },
-    "click" : {
-
-    },
     "Confirm" : {
       "localizations" : {
         "ka" : {
@@ -169,6 +166,9 @@
           }
         }
       }
+    },
+    "Next Player" : {
+
     },
     "Play" : {
       "localizations" : {

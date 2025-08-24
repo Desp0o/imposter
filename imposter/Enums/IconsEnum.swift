@@ -16,4 +16,5 @@ enum IconsEnum: String {
   case book
   case gearshape
   case xmark
+  case arrowUp = "arrow.up"
 }
