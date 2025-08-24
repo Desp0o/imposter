@@ -15,7 +15,6 @@ extension Text {
       .monospaced()
       .fontWeight(weight)
       .font(.system(size: size))
-      .multilineTextAlignment(.leading)
   }
   
   func buttonFilled(color: Color = .mainWhite, weight: Font.Weight = .bold, size: CGFloat = 16) -> some View {

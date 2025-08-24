@@ -61,6 +61,9 @@
         }
       }
     },
+    "click" : {
+
+    },
     "Confirm" : {
       "localizations" : {
         "ka" : {
@@ -70,9 +73,6 @@
           }
         }
       }
-    },
-    "delete" : {
-
     },
     "Disabled" : {
       "localizations" : {
@@ -102,9 +102,6 @@
       }
     },
     "Give imposter a hint about the word to help them blend in better" : {
-
-    },
-    "godbless" : {
 
     },
     "How to Play" : {
@@ -193,9 +190,6 @@
           }
         }
       }
-    },
-    "print" : {
-
     },
     "time amount" : {
 
