@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct ImposterCount: View {
-  @Environment(CategoryManager.self) private var catManager
+  @Environment(GameManager.self) private var gameManager
   @Binding var isImposterAddSheetVisible: Bool
   
   var imposterPossibleCount: Int {
-    switch catManager.localsQuantity {
+    switch gameManager.localsQuantity {
     case 3...5:
       return 1
     case 6...7:
@@ -28,8 +28,8 @@ struct ImposterCount: View {
   var body: some View {
     VStack {
       Picker("players quantity", selection: Binding(
-        get: { catManager.impostersQuantity},
-        set: { catManager.impostersQuantity = $0 }
+        get: { gameManager.impostersQuantity},
+        set: { gameManager.impostersQuantity = $0 }
       ))
       {
         ForEach(1...imposterPossibleCount, id: \.self) { num in

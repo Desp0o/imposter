@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct LocalsCount: View {
-  @Environment(CategoryManager.self) private var catManager
+  @Environment(GameManager.self) private var gameManager
   @Binding var isLocalsAddSheetVisible: Bool
   
   var body: some View {
     VStack {
       Picker("players quantity", selection: Binding(
-        get: { catManager.localsQuantity },
-        set: { catManager.localsQuantity = $0 }
+        get: { gameManager.localsQuantity },
+        set: { gameManager.localsQuantity = $0 }
       )) {
         ForEach(3...10, id: \.self) { num in
           Text("\(num)")
@@ -41,18 +41,18 @@ struct LocalsCount: View {
     .presentationDetents([.fraction(0.35)])
     .padding()
     .background(.mainBlack)
-    .onChange(of: catManager.localsQuantity) { _, newValue in
+    .onChange(of: gameManager.localsQuantity) { _, newValue in
       switch newValue {
       case 3...5:
-        if catManager.impostersQuantity > 1 {
-          return catManager.impostersQuantity = 1
+        if gameManager.impostersQuantity > 1 {
+          return gameManager.impostersQuantity = 1
         }
       case 6...7:
-        if catManager.impostersQuantity > 2 {
-          return catManager.impostersQuantity = 2
+        if gameManager.impostersQuantity > 2 {
+          return gameManager.impostersQuantity = 2
         }
       default:
-        return catManager.impostersQuantity = 1
+        return gameManager.impostersQuantity = 1
       }
     }
   }

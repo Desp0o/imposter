@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-  @Environment(CategoryManager.self) private var catManager
+  @Environment(GameManager.self) private var gameManager
   
   @State private var randomWord: WordModel? = nil
   @State private var roles: [Role]? = nil
@@ -35,7 +35,7 @@ struct GameView: View {
               Text("\(roles[curretnRole].rawValue)")
                 .customFontSytle(color: .red, weight: .bold, size: 26)
               
-              if catManager.isHintEnabled {
+              if gameManager.isHintEnabled {
                 Text("Hint: \(randomWord?.geoHint ?? "")")
                   .customFontSytle(color: .mainWhite.opacity(0.8), weight: .semibold, size: 18)
               }
@@ -76,7 +76,7 @@ struct GameView: View {
         DragGesture(minimumDistance: 0)
           .onChanged { value in
             if value.translation.height < 0 {
-              withAnimation(.spring()) {
+              withAnimation {
                 offset.height = max(value.translation.height, -200)
                 
                 
@@ -84,7 +84,7 @@ struct GameView: View {
             }
           }
           .onEnded { _ in
-            withAnimation(.spring()) {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.3)) {
               offset = .zero
             }
             
@@ -101,8 +101,8 @@ struct GameView: View {
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.mainBlack)
     .onAppear {
-      randomWord = catManager.generateRandomWord()
-      roles = catManager.assignRoles()
+      randomWord = gameManager.generateRandomWord()
+      roles = gameManager.assignRoles()
     }
   }
 }
@@ -120,5 +120,5 @@ extension GameView {
 
 //#Preview {
 //  GameView()
-//    .environment(CategoryManager())
+//    .environment(GameManager())
 //}

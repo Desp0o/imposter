@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Main: View {
-  @Environment(CategoryManager.self) private var catManager
+  @Environment(GameManager.self) private var gameManager
   @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
   
   @State private var isLocalsAddSheetVisible: Bool = false
@@ -40,7 +40,7 @@ struct Main: View {
                 .customFontSytle(weight: .bold)
               
               HStack {
-                Text("\(catManager.localsQuantity)")
+                Text("\(gameManager.localsQuantity)")
                   .customFontSytle()
                 
                 Text("Players")
@@ -58,10 +58,10 @@ struct Main: View {
                 .customFontSytle(weight: .bold)
               
               HStack {
-                Text("\(catManager.impostersQuantity)")
+                Text("\(gameManager.impostersQuantity)")
                   .customFontSytle()
                 
-                Text(catManager.impostersQuantity > 1 ?  "Imposters" : "Imposter")
+                Text(gameManager.impostersQuantity > 1 ?  "Imposters" : "Imposter")
                   .customFontSytle()
               }
               .componetnTextBackground()
@@ -76,7 +76,7 @@ struct Main: View {
               
               if isTimeLimitEnabled {
                 HStack {
-                  Text("\(catManager.timeAmount)")
+                  Text("\(gameManager.timeAmount)")
                     .customFontSytle()
                   
                   Text("Minutes")
@@ -98,8 +98,8 @@ struct Main: View {
             // MARK: - Hint
             VStack(alignment: .leading, spacing: 20) {
               TogglerCustomComponent(title: "💡 Imposter Hint", value: Binding(
-                get: { catManager.isHintEnabled },
-                set: { catManager.isHintEnabled = $0 }
+                get: { gameManager.isHintEnabled },
+                set: { gameManager.isHintEnabled = $0 }
               ))
               
               HStack {
@@ -121,7 +121,7 @@ struct Main: View {
                 .customFontSytle(weight: .bold)
               
               FlowLayout(spacing: 10, vSpacing: 10) {
-                ForEach(catManager.categories, id: \.id) { list in
+                ForEach(gameManager.categories, id: \.id) { list in
                   Text(appLanguage == .ka ? list.nameGeo : list.nameEng)
                     .customFontSytle()
                     .componetnTextBackground()

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CategoryView: View {
-  @Environment(CategoryManager.self) private var catManager
+  @Environment(GameManager.self) private var gameManager
   @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
   @Binding var isCategorySheetVisible: Bool
   
@@ -24,7 +24,7 @@ struct CategoryView: View {
             HStack {
               Text(appLanguage == .ka ? category.nameGeo : category.nameEng)
                 .customFontSytle(
-                  color: catManager.categories.contains(category)
+                  color: gameManager.categories.contains(category)
                   ? .mainBlack : .mainWhite,
                   weight: .semibold
                 )
@@ -32,7 +32,7 @@ struct CategoryView: View {
               Spacer()
             }
             .padding()
-            .background(catManager.categories.contains(category) ? .mainPink : .clear)
+            .background(gameManager.categories.contains(category) ? .mainPink : .clear)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay {
               RoundedRectangle(cornerRadius: 8)
@@ -40,14 +40,14 @@ struct CategoryView: View {
             }
             .contentShape(Rectangle())
             .onTapGesture {
-              if !catManager.categories.contains(category) {
+              if !gameManager.categories.contains(category) {
                 withAnimation(.smooth) {
-                  catManager.categories.append(category)
+                  gameManager.categories.append(category)
                 }
               } else {
                 withAnimation(.smooth) {
-                  guard catManager.categories.count > 1 else { return }
-                  catManager.categories.removeAll { category.id == $0.id }
+                  guard gameManager.categories.count > 1 else { return }
+                  gameManager.categories.removeAll { category.id == $0.id }
                 }
               }
             }

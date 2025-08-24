@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct TimeSetup: View {
-  @Environment(CategoryManager.self) private var catManager
+  @Environment(GameManager.self) private var gameManager
   @Binding var isTimeSheetVisible: Bool
   
   var body: some View {
     VStack {
       Picker("time amount", selection: Binding(
-        get: { catManager.timeAmount },
-        set: { catManager.timeAmount = $0 }
+        get: { gameManager.timeAmount },
+        set: { gameManager.timeAmount = $0 }
       )) {
         ForEach(3...10, id: \.self) { num in
           Text("\(num)")

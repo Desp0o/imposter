@@ -1,5 +1,5 @@
 //
-//  CategoryManager.swift
+//  GameManager.swift
 //  imposter
 //
 //  Created by Tornike Despotashvili on 8/23/25.
@@ -10,7 +10,7 @@ import Observation
 import SwiftUICore
 
 @Observable
-final class CategoryManager {
+final class GameManager {
   var localsQuantity: Int = 3
   var impostersQuantity: Int = 1
   var timeAmount: Int = 3
