@@ -9,12 +9,11 @@
 import SwiftUI
 
 struct ImposterCount: View {
+  @Environment(CategoryManager.self) private var catManager
   @Binding var isImposterAddSheetVisible: Bool
-  @Binding var impostersQuantity: Int
-  @Binding var localsQuantity: Int
   
   var imposterPossibleCount: Int {
-    switch localsQuantity {
+    switch catManager.localsQuantity {
     case 3...5:
       return 1
     case 6...7:
@@ -28,7 +27,11 @@ struct ImposterCount: View {
   
   var body: some View {
     VStack {
-      Picker("players quantity", selection: $impostersQuantity) {
+      Picker("players quantity", selection: Binding(
+        get: { catManager.impostersQuantity},
+        set: { catManager.impostersQuantity = $0 }
+      ))
+      {
         ForEach(1...imposterPossibleCount, id: \.self) { num in
           Text("\(num)")
             .customFontSytle(color: .mainPink, weight: .bold, size: 24)

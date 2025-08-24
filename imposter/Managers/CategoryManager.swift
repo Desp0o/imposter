@@ -7,9 +7,16 @@
 
 
 import Observation
+import SwiftUICore
 
 @Observable
 final class CategoryManager {
+  var localsQuantity: Int = 3
+  var impostersQuantity: Int = 1
+  var timeAmount: Int = 3
+  var isHintEnabled: Bool = false
+  
+  
   var categories: [CategoryModel] = [
     CategoryModel(id: 1, nameEng: "Everyday Objects", nameGeo: "ყოველდღიური", data: everydayObjectsData),
     CategoryModel(id: 2, nameEng: "Flora & Fauna", nameGeo: "ფლორა & ფაუნა", data: floraAndFaunaData)
@@ -24,9 +31,9 @@ final class CategoryManager {
     return randomWord
   }
   
-  func assignRoles(playersCount: Int, impostersCount: Int) -> [Role] {
-    let roles: [Role] = Array(repeating: .imposter, count: impostersCount) +
-                        Array(repeating: .local, count: playersCount)
+  func assignRoles() -> [Role] {
+    let roles: [Role] = Array(repeating: .imposter, count: impostersQuantity) +
+    Array(repeating: .local, count: localsQuantity)
     
     return roles.shuffled()
   }

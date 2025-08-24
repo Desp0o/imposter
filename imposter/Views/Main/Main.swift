@@ -17,12 +17,7 @@ struct Main: View {
   @State private var isRulesSheetVisible: Bool = false
   @State private var isTimeLimitEnabled: Bool = false
   @State private var isTimeSheetVisible: Bool = false
-  @State private var isHintEnabled: Bool = false
   @State private var isCategorySheetVisible: Bool = false
-  
-  @State private var localsQuantity: Int = 3
-  @State private var impostersQuantity: Int = 1
-  @State private var timeAmount: Int = 3
   
   var body: some View {
     NavigationStack {
@@ -45,7 +40,7 @@ struct Main: View {
                 .customFontSytle(weight: .bold)
               
               HStack {
-                Text("\(localsQuantity)")
+                Text("\(catManager.localsQuantity)")
                   .customFontSytle()
                 
                 Text("Players")
@@ -63,10 +58,10 @@ struct Main: View {
                 .customFontSytle(weight: .bold)
               
               HStack {
-                Text("\(impostersQuantity)")
+                Text("\(catManager.impostersQuantity)")
                   .customFontSytle()
                 
-                Text(impostersQuantity > 1 ?  "Imposters" : "Imposter")
+                Text(catManager.impostersQuantity > 1 ?  "Imposters" : "Imposter")
                   .customFontSytle()
               }
               .componetnTextBackground()
@@ -81,7 +76,7 @@ struct Main: View {
               
               if isTimeLimitEnabled {
                 HStack {
-                  Text("\(timeAmount)")
+                  Text("\(catManager.timeAmount)")
                     .customFontSytle()
                   
                   Text("Minutes")
@@ -102,8 +97,10 @@ struct Main: View {
             
             // MARK: - Hint
             VStack(alignment: .leading, spacing: 20) {
-              TogglerCustomComponent(title: "💡 Imposter Hint", value: $isHintEnabled)
-              
+              TogglerCustomComponent(title: "💡 Imposter Hint", value: Binding(
+                get: { catManager.isHintEnabled },
+                set: { catManager.isHintEnabled = $0 }
+              ))
               
               HStack {
                 Text("Give imposter a hint about the word to help them blend in better")
@@ -128,7 +125,6 @@ struct Main: View {
                   Text(appLanguage == .ka ? list.nameGeo : list.nameEng)
                     .customFontSytle()
                     .componetnTextBackground()
-                  
                 }
               }
             }
@@ -163,22 +159,19 @@ struct Main: View {
                       .fill(.mainPink)
                   )
               }
-
             }
             
           }
           .padding(.bottom, 30)
           .sheet(isPresented: $isLocalsAddSheetVisible) {
-            LocalsCount(
-              localsQuantity: $localsQuantity,
-              isLocalsAddSheetVisible: $isLocalsAddSheetVisible
+            LocalsCount(isLocalsAddSheetVisible: $isLocalsAddSheetVisible
             )
           }
           .sheet(isPresented: $isImposterAddSheetVisible) {
-            ImposterCount(isImposterAddSheetVisible: $isImposterAddSheetVisible, impostersQuantity: $impostersQuantity, localsQuantity: $localsQuantity)
+            ImposterCount(isImposterAddSheetVisible: $isImposterAddSheetVisible)
           }
           .sheet(isPresented: $isTimeSheetVisible) {
-            TimeSetup(timeAmount: $timeAmount, isTimeSheetVisible: $isTimeSheetVisible)
+            TimeSetup(isTimeSheetVisible: $isTimeSheetVisible)
           }
           .sheet(isPresented: $isCategorySheetVisible) {
             CategoryView(isCategorySheetVisible: $isCategorySheetVisible)
@@ -188,6 +181,7 @@ struct Main: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding()
       }
+      .scrollIndicators(.hidden)
       .background(.mainBlack)
     }
   }

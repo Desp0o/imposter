@@ -16,8 +16,11 @@ struct TogglerCustomComponent: View {
       Text(title)
         .customFontSytle(weight: .bold)
       
+      Spacer()
+      
       Toggle("", isOn: $value)
         .tint(.mainPink)
+        .frame(width: 70)
     }
   }
 }

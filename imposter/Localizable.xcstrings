@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "%lld" : {
 
     },
@@ -84,6 +87,9 @@
         }
       }
     },
+    "Do not tell the word to other players." : {
+
+    },
     "en" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -102,6 +108,9 @@
       }
     },
     "Give imposter a hint about the word to help them blend in better" : {
+
+    },
+    "Hint: %@" : {
 
     },
     "How to Play" : {
@@ -170,6 +179,9 @@
           }
         }
       }
+    },
+    "Player %lld" : {
+
     },
     "Players" : {
       "localizations" : {

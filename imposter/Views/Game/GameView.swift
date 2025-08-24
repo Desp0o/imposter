@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
   @Environment(CategoryManager.self) private var catManager
+  
   @State private var randomWord: WordModel? = nil
   @State private var roles: [Role]? = nil
   
@@ -30,8 +31,15 @@ struct GameView: View {
             Text("\(randomWord?.geo ?? "")")
               .customFontSytle(color: .mainWhite, weight: .bold, size: 26)
           } else {
-            Text("\(roles[curretnRole].rawValue)")
-              .customFontSytle(color: .red, weight: .bold, size: 26)
+            VStack {
+              Text("\(roles[curretnRole].rawValue)")
+                .customFontSytle(color: .red, weight: .bold, size: 26)
+              
+              if catManager.isHintEnabled {
+                Text("Hint: \(randomWord?.geoHint ?? "")")
+                  .customFontSytle(color: .mainWhite.opacity(0.8), weight: .semibold, size: 18)
+              }
+            }
           }
           
         }
@@ -94,7 +102,7 @@ struct GameView: View {
     .background(.mainBlack)
     .onAppear {
       randomWord = catManager.generateRandomWord()
-      roles = catManager.assignRoles(playersCount: 4, impostersCount: 1)
+      roles = catManager.assignRoles()
     }
   }
 }
@@ -110,7 +118,7 @@ extension GameView {
   }
 }
 
-#Preview {
-  GameView()
-    .environment(CategoryManager())
-}
+//#Preview {
+//  GameView()
+//    .environment(CategoryManager())
+//}

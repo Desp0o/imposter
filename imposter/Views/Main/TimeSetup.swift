@@ -9,12 +9,15 @@
 import SwiftUI
 
 struct TimeSetup: View {
-  @Binding var timeAmount: Int
+  @Environment(CategoryManager.self) private var catManager
   @Binding var isTimeSheetVisible: Bool
   
   var body: some View {
     VStack {
-      Picker("time amount", selection: $timeAmount) {
+      Picker("time amount", selection: Binding(
+        get: { catManager.timeAmount },
+        set: { catManager.timeAmount = $0 }
+      )) {
         ForEach(3...10, id: \.self) { num in
           Text("\(num)")
             .customFontSytle(color: .mainPink, weight: .bold, size: 24)

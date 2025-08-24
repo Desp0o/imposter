@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct LocalsCount: View {
-  @Binding var localsQuantity: Int
+  @Environment(CategoryManager.self) private var catManager
   @Binding var isLocalsAddSheetVisible: Bool
   
   var body: some View {
     VStack {
-      Picker("players quantity", selection: $localsQuantity) {
+      Picker("players quantity", selection: Binding(
+        get: { catManager.localsQuantity },
+        set: { catManager.localsQuantity = $0 }
+      )) {
         ForEach(3...10, id: \.self) { num in
           Text("\(num)")
             .customFontSytle(color: .mainPink, weight: .bold, size: 24)
