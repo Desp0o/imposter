@@ -14,8 +14,9 @@ struct RoleCards: View {
   @State private var offset: CGSize = .zero
 
   @Binding var curretnRole: Int
-  @Binding var isRevealed: Bool
+  @Binding var isAssigned: Bool
   @Binding var roles: [Role]?
+  @Binding var isGameStarted: Bool
   
   var body: some View {
     VStack(spacing: 20) {
@@ -32,7 +33,7 @@ struct RoleCards: View {
     .padding()
     .background(.mainPink)
     .overlay(alignment: .bottom) {
-      if isRevealed {
+      if isAssigned {
         Button {
           setupRoles()
         } label: {
@@ -71,7 +72,7 @@ struct RoleCards: View {
           }
           
           withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.3)) {
-            isRevealed = true
+            isAssigned = true
           }
         }
     )
@@ -85,8 +86,10 @@ extension RoleCards {
       curretnRole += 1
       
       withAnimation(.smooth(duration: 0.1)) {
-        isRevealed = false
+        isAssigned = false
       }
+    } else {
+      isGameStarted = true
     }
   }
 }

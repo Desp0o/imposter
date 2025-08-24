@@ -15,7 +15,6 @@ struct Main: View {
   @State private var isLocalsAddSheetVisible: Bool = false
   @State private var isImposterAddSheetVisible: Bool = false
   @State private var isRulesSheetVisible: Bool = false
-  @State private var isTimeLimitEnabled: Bool = false
   @State private var isTimeSheetVisible: Bool = false
   @State private var isCategorySheetVisible: Bool = false
   
@@ -29,7 +28,7 @@ struct Main: View {
             }
           
           VStack(spacing: 20) {
-            Text("Imposter")
+            Text("IMPOSTER")
               .customFontSytle(color: .mainGray, weight: .black, size: 42)
             
             Spacer().frame(height: 5)
@@ -72,9 +71,13 @@ struct Main: View {
             
             // MARK: - time limit
             VStack(alignment: .leading, spacing: 20) {
-              TogglerCustomComponent(title: "⏰ Time Limit", value: $isTimeLimitEnabled)
+              TogglerCustomComponent(title: "⏰ Time Limit",
+                                     value: Binding(
+                                      get: { gameManager.isTimeLimitEnabled },
+                                      set: { gameManager.isTimeLimitEnabled = $0 })
+              )
               
-              if isTimeLimitEnabled {
+              if gameManager.isTimeLimitEnabled {
                 HStack {
                   Text("\(gameManager.timeAmount)")
                     .customFontSytle()
@@ -90,7 +93,7 @@ struct Main: View {
               }
             }
             .gameSettingsComponent {
-              if isTimeLimitEnabled {
+              if gameManager.isTimeLimitEnabled {
                 isTimeSheetVisible = true
               }
             }
@@ -110,7 +113,7 @@ struct Main: View {
               .clipShape(RoundedRectangle(cornerRadius: 8))
             }
             .gameSettingsComponent {
-              if isTimeLimitEnabled {
+              if gameManager.isTimeLimitEnabled {
                 isTimeSheetVisible = true
               }
             }
@@ -149,6 +152,7 @@ struct Main: View {
               
               NavigationLink {
                 GameView()
+                  .toolbar(.hidden)
               } label: {
                 Text("Play")
                   .customFontSytle(color: .mainBlack, weight: .bold, size: 20)
@@ -179,7 +183,7 @@ struct Main: View {
           .toolbar(.hidden, for: .tabBar)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .padding()
+        .padding(30)
       }
       .scrollIndicators(.hidden)
       .background(.mainBlack)
@@ -190,6 +194,7 @@ struct Main: View {
 
 #Preview {
   Main()
+    .environment(GameManager())
 }
 
 

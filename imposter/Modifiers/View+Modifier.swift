@@ -14,9 +14,6 @@ extension View {
     .frame(maxWidth: .infinity, alignment: .leading)
     .background(.mainGray)
     .clipShape(RoundedRectangle(cornerRadius: 8))
-    .overlay {
-      RoundedRectangle(cornerRadius: 12).stroke(.mainPink, lineWidth: 1)
-    }
     .shadow(color: .black.opacity(0.4), radius: 5, x: 0, y: 5)
     .onTapGesture {
       action()

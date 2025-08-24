@@ -104,6 +104,9 @@
         }
       }
     },
+    "Game started!" : {
+
+    },
     "Give imposter a hint about the word to help them blend in better" : {
 
     },
@@ -129,6 +132,9 @@
           }
         }
       }
+    },
+    "IMPOSTER" : {
+
     },
     "Imposters" : {
       "localizations" : {
@@ -203,7 +209,16 @@
         }
       }
     },
+    "Slide up to reveal" : {
+
+    },
+    "starts the conversation" : {
+
+    },
     "time amount" : {
+
+    },
+    "Time to talk and catch the imposter!" : {
 
     }
   },
