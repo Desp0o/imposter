@@ -139,6 +139,9 @@
     "IMPOSTER" : {
 
     },
+    "Imposter: " : {
+
+    },
     "Imposters" : {
       "localizations" : {
         "ka" : {
@@ -176,7 +179,13 @@
         }
       }
     },
+    "New Game" : {
+
+    },
     "Next Player" : {
+
+    },
+    "Payer %lld" : {
 
     },
     "Play" : {
@@ -212,6 +221,9 @@
         }
       }
     },
+    "Reveal imposter & word" : {
+
+    },
     "Slide up to reveal" : {
 
     },
@@ -222,6 +234,9 @@
 
     },
     "Time to talk and catch the imposter!" : {
+
+    },
+    "Word was: " : {
 
     }
   },

@@ -112,11 +112,7 @@ struct Main: View {
               .padding(8)
               .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            .gameSettingsComponent {
-              if gameManager.isTimeLimitEnabled {
-                isTimeSheetVisible = true
-              }
-            }
+            .gameSettingsComponent(action: {})
             
             // MARK: - Category
             VStack(alignment: .leading, spacing: 20) {
