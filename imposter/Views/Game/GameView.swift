@@ -59,6 +59,7 @@ struct InGameView: View  {
   @State private var whoStarts: Int? = nil
   @State private var timeRemaining: Int = 0
   @State private var isLastSeconds: Bool = false
+  @State private var isGameOver: Bool = false
   
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   
@@ -107,20 +108,26 @@ struct InGameView: View  {
       }
       
       if gameManager.isTimeLimitEnabled {
-        Text(timeString(from: timeRemaining))
-          .customFontSytle(color: isLastSeconds ? .red : .mainWhite, weight: .bold, size: 50)
-          .font(.largeTitle)
-          .onReceive(timer) { _ in
-            if timeRemaining <= 10 {
-              isLastSeconds = true
+        switch isGameOver {
+        case false:
+          Text(timeString(from: timeRemaining))
+            .customFontSytle(color: isLastSeconds ? .red : .mainWhite, weight: .bold, size: 50)
+            .font(.largeTitle)
+            .onReceive(timer) { _ in
+              if timeRemaining <= 10 {
+                isLastSeconds = true
+              }
+              
+              if timeRemaining > 0 {
+                timeRemaining -= 1
+              } else {
+                isGameOver = true
+              }
             }
-            
-            if timeRemaining > 0 {
-              timeRemaining -= 1
-            } else {
-              print("game over")
-            }
-          }
+        case true:
+          Text("Game Over")
+            .customFontSytle(color: .red, weight: .bold, size: 50)
+        }
       }
       
     }
