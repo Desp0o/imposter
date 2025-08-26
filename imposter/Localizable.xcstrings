@@ -280,16 +280,6 @@
         }
       }
     },
-    "Payer %lld" : {
-      "localizations" : {
-        "ka" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "მოთამაშე %lld"
-          }
-        }
-      }
-    },
     "Play" : {
       "localizations" : {
         "ka" : {

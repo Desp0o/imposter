@@ -38,8 +38,8 @@ struct RevealedRolesAndWord: View {
             Text("Imposter: ")
               .customFontSytle()
             
-            Text("Payer \(index + 1)")
-              .customFontSytle(color: .mainWhite)
+            Text("Player \(index + 1)")
+              .customFontSytle(color: .mainWhite, size: 18)
               .padding(.vertical, 3)
               .padding(.horizontal, 5)
               .background(

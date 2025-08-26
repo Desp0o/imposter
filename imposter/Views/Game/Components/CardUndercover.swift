@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CardUndercover: View {
+  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
   @Environment(GameManager.self) private var gameManager
   
   @Binding var randomWord: WordModel?
@@ -23,8 +24,10 @@ struct CardUndercover: View {
         let role = roles[curretnRole].rawValue
         
         if role != "Imposter" {
-          Text("\(randomWord?.geo ?? "")")
-            .customFontSytle(color: .mainWhite, weight: .bold, size: 26)
+          if let randomWord {
+            Text(appLanguage == .ka ? randomWord.geo : randomWord.eng)
+              .customFontSytle(color: .mainWhite, weight: .bold, size: 26)
+          }
         } else {
           VStack(spacing: 10) {
             Text("\(roles[curretnRole].rawValue)")
