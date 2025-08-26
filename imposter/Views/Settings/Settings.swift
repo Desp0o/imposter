@@ -90,7 +90,7 @@ struct SettingsView: View {
           .customFontSytle(color: .mainGray, weight: .medium, size: 14)
       }
       
-      BannerViewContainer(bannerType: .banner)
+      BannerViewContainer(bannerType: .settingsBanner)
         .frame(maxWidth: .infinity)
         .frame(height: 300)
     }
