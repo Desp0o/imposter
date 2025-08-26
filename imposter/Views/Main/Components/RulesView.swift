@@ -63,6 +63,11 @@ struct RulesView: View {
       }
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
+      
+      BannerViewContainer(bannerType: .ruleBanner)
+        .frame(maxWidth: .infinity)
+        .frame(height: 50)
+        .padding(.horizontal, 30)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     .padding(20)

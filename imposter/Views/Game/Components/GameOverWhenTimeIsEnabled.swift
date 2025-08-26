@@ -19,31 +19,38 @@ struct GameOverWhenTimeIsEnabled: View {
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
   
   var body: some View {
-    switch isGameOver {
-    case false:
-      Text(timeString(from: timeRemaining))
-        .customFontSytle(color: isLastSeconds ? .red : .mainWhite, weight: .bold, size: 50)
-        .font(.largeTitle)
-        .onReceive(timer) { _ in
-          if timeRemaining <= 10 {
-            isLastSeconds = true
+    VStack(spacing: 30) {
+      switch isGameOver {
+      case false:
+        Text(timeString(from: timeRemaining))
+          .customFontSytle(color: isLastSeconds ? .red : .mainWhite, weight: .bold, size: 50)
+          .font(.largeTitle)
+          .onReceive(timer) { _ in
+            if timeRemaining <= 10 {
+              isLastSeconds = true
+            }
+            
+            if timeRemaining > 0 {
+              timeRemaining -= 1
+            } else {
+              isGameOver = true
+            }
           }
+      case true:
+        VStack(spacing: 30) {
+          Text("Game Over")
+            .customFontSytle(color: .red, weight: .bold, size: 50)
           
-          if timeRemaining > 0 {
-            timeRemaining -= 1
-          } else {
-            isGameOver = true
-          }
+          RevealedRolesAndWord(randomWord: $randomWord, impostersWithIndices: $impostersWithIndices)
+          
+          NewGameButton()
         }
-    case true:
-      VStack(spacing: 30) {
-        Text("Game Over")
-          .customFontSytle(color: .red, weight: .bold, size: 50)
-        
-        RevealedRolesAndWord(randomWord: $randomWord, impostersWithIndices: $impostersWithIndices)
-        
-        NewGameButton()
       }
+      
+      BannerViewContainer(bannerType: .inGameBanner)
+        .frame(maxWidth: .infinity)
+        .frame(height: 100)
+        .padding(.horizontal, 30)
     }
   }
 }

@@ -37,6 +37,9 @@ struct GameView: View {
       randomWord = gameManager.generateRandomWord()
       roles = gameManager.assignRoles()
     }
+    .overlay {
+      AdView(isMain: false, bannerId: .cardBanner)
+    }
 }
 }
 
