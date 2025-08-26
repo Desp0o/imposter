@@ -12,4 +12,5 @@ enum AdsEnum: String {
   case cardsBottomBanner = "ca-app-pub-2568329825158793/7375295586"
   case categoryBanner = "ca-app-pub-2568329825158793/5204427816"
   case categoryBottom = "ca-app-pub-2568329825158793/9391084833"
+  case ruleBanner = "ca-app-pub-2568329825158793/9007941455"
 }

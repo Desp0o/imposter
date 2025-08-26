@@ -42,9 +42,7 @@ class BannerCoordinator: NSObject, BannerViewDelegate {
 
     // MARK: - GADBannerViewDelegate methods
 
-    func bannerViewDidReceiveAd(_ bannerView: BannerView) {
-      print("DID RECEIVE AD.")
-    }
+    func bannerViewDidReceiveAd(_ bannerView: BannerView) { }
 
     func bannerView(_ bannerView: BannerView, didFailToReceiveAdWithError error: Error) {
       print("FAILED TO RECEIVE AD: \(error.localizedDescription)")
