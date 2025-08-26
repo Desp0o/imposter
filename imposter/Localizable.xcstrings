@@ -11,15 +11,28 @@
 
     },
     "© All rights reserved." : {
-
-    },
-    "⏰ Time Limit" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⏰ დრო"
+            "value" : "© ყველა უფლება დაცულია"
+          }
+        }
+      }
+    },
+    "⏰ Time Limit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⏰ Time Limit"
+          }
+        },
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⏰ დროის ლიმიტი"
           }
         }
       }
@@ -58,7 +71,14 @@
       }
     },
     "Change Language" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ენის შეცვლა"
+          }
+        }
+      }
     },
     "Choose Category" : {
       "localizations" : {
@@ -81,7 +101,14 @@
       }
     },
     "Contact" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კონტაქტი"
+          }
+        }
+      }
     },
     "Disabled" : {
       "localizations" : {
@@ -94,7 +121,14 @@
       }
     },
     "Do not tell the word to other players." : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "არ უთხრა სიტყვა სხვა მოთამაშეს"
+          }
+        }
+      }
     },
     "en" : {
       "extractionState" : "manual",
@@ -114,16 +148,44 @@
       }
     },
     "Game Over" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დასრულდა"
+          }
+        }
+      }
     },
     "Game started!" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "თამაში დაიწყო"
+          }
+        }
+      }
     },
     "Give imposter a hint about the word to help them blend in better" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მიეცი ჯაშუშს მინიშნება სიტყვის შესახებ."
+          }
+        }
+      }
     },
     "Hint: %@" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მინიშნება: %@"
+          }
+        }
+      }
     },
     "How to Play" : {
       "localizations" : {
@@ -149,7 +211,14 @@
 
     },
     "Imposter: " : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ჯაშუში:"
+          }
+        }
+      }
     },
     "Imposters" : {
       "localizations" : {
@@ -192,13 +261,34 @@
       }
     },
     "New Game" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ახალი თამაში"
+          }
+        }
+      }
     },
     "Next Player" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "შემდეგი"
+          }
+        }
+      }
     },
     "Payer %lld" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მოთამაშე %lld"
+          }
+        }
+      }
     },
     "Play" : {
       "localizations" : {
@@ -211,7 +301,14 @@
       }
     },
     "Player %lld" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "მოთამაშე %lld"
+          }
+        }
+      }
     },
     "Players" : {
       "localizations" : {
@@ -234,34 +331,97 @@
       }
     },
     "Pricacy Policy" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კონფიდენციალურობა"
+          }
+        }
+      }
     },
     "Privacy Policy" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "კონფიდენციალურობა"
+          }
+        }
+      }
     },
     "Reveal imposter & word" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ჯაშუშის და სიტყვის გამოვლენა"
+          }
+        }
+      }
     },
     "Settings" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პარამეტრები"
+          }
+        }
+      }
     },
     "Share with Friends" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გაუზიარე მეგობარს"
+          }
+        }
+      }
     },
     "Slide up to reveal" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "აწი სანახავად"
+          }
+        }
+      }
     },
     "starts the conversation" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "იწყებს საუბარს."
+          }
+        }
+      }
     },
     "time amount" : {
 
     },
     "Time to talk and catch the imposter!" : {
-
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "დროა ისაუბროთ და დაიჭიროთ ჯაშუში."
+          }
+        }
+      }
     },
-    "Word was: " : {
-
+    "Word: " : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სიტყვა:"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

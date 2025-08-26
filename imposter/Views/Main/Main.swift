@@ -71,7 +71,7 @@ struct Main: View {
             
             // MARK: - time limit
             VStack(alignment: .leading, spacing: 20) {
-              TogglerCustomComponent(title: "⏰ Time Limit",
+              TogglerCustomComponent(title: appLanguage == .ka ? "⏰ დროის ლიმიტი" : "⏰ Time Limit",
                                      value: Binding(
                                       get: { gameManager.isTimeLimitEnabled },
                                       set: { gameManager.isTimeLimitEnabled = $0 })
@@ -100,7 +100,7 @@ struct Main: View {
             
             // MARK: - Hint
             VStack(alignment: .leading, spacing: 20) {
-              TogglerCustomComponent(title: "💡 Imposter Hint", value: Binding(
+              TogglerCustomComponent(title: appLanguage == .ka ? "💡 ჯაშუშის მინიშნება" : "💡 Imposter Hint", value: Binding(
                 get: { gameManager.isHintEnabled },
                 set: { gameManager.isHintEnabled = $0 }
               ))

@@ -17,7 +17,7 @@ struct RevealedRolesAndWord: View {
   var body: some View {
     VStack {
       HStack(spacing: 0) {
-        Text("Word was: ")
+        Text("Word: ")
           .customFontSytle(size: 18)
         
         if let randomWord {

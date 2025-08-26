@@ -138,8 +138,11 @@ struct LanguageChangeView: View {
     VStack {
       Picker("Language selector", selection: $appLanguage) {
         ForEach(LanguageEnum.allCases) { lang in
-          Text(lang.rawValue).tag(lang)
+          Text(lang.displayName).tag(lang)
             .foregroundStyle(.mainWhite)
+            .onAppear {
+              print(lang)
+            }
         }
       }
       .pickerStyle(.wheel)
