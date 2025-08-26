@@ -14,9 +14,14 @@ struct CategoryView: View {
   @Binding var isCategorySheetVisible: Bool
   
   var body: some View {
-    VStack(spacing: 40) {
+    VStack(spacing: 5) {
       Text("Choose Category")
         .customFontSytle(weight: .bold, size: 24)
+      
+      BannerViewContainer(bannerType: .categoryBanner)
+        .frame(maxWidth: .infinity)
+        .frame(height: 40)
+        .padding(.horizontal, 30)
       
       ScrollView {
         VStack(spacing: 20) {
@@ -56,6 +61,11 @@ struct CategoryView: View {
       }
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
+      
+      BannerViewContainer(bannerType: .categoryBottom)
+        .frame(maxWidth: .infinity)
+        .frame(height: 40)
+        .padding(.horizontal, 30)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding()

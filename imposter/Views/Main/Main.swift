@@ -160,7 +160,6 @@ struct Main: View {
                   )
               }
             }
-            
           }
           .padding(.bottom, 30)
           .sheet(isPresented: $isLocalsAddSheetVisible) {
@@ -183,6 +182,9 @@ struct Main: View {
       }
       .scrollIndicators(.hidden)
       .background(.mainBlack)
+      .overlay {
+        AdView(isMain: true, bannerId: .banner)
+      }
     }
   }
   

@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AC119E4B2E5DA2A700856B73 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = AC119E4A2E5DA2A700856B73 /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AC78CB7C2E525ECF007DAAD2 /* imposter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imposter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AC119E482E5D9F8D00856B73 /* Exceptions for "imposter" folder in "imposter" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AC78CB7B2E525ECF007DAAD2 /* imposter */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AC78CB7E2E525ECF007DAAD2 /* imposter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AC119E482E5D9F8D00856B73 /* Exceptions for "imposter" folder in "imposter" target */,
+			);
 			path = imposter;
 			sourceTree = "<group>";
 		};
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC119E4B2E5DA2A700856B73 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			);
 			name = imposter;
 			packageProductDependencies = (
+				AC119E4A2E5DA2A700856B73 /* GoogleMobileAds */,
 			);
 			productName = imposter;
 			productReference = AC78CB7C2E525ECF007DAAD2 /* imposter.app */;
@@ -97,6 +116,7 @@
 			mainGroup = AC78CB732E525ECF007DAAD2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				AC119E492E5DA2A700856B73 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AC78CB7D2E525ECF007DAAD2 /* Products */;
@@ -262,6 +282,7 @@
 				DEVELOPMENT_TEAM = CLN236LPY2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = imposter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -290,6 +311,7 @@
 				DEVELOPMENT_TEAM = CLN236LPY2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = imposter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -330,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC119E492E5DA2A700856B73 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC119E4A2E5DA2A700856B73 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC119E492E5DA2A700856B73 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC78CB742E525ECF007DAAD2 /* Project object */;
 }

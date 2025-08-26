@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct RoleCards: View {
+  @Environment(\.dismiss) private var dismiss
   @Environment(GameManager.self) private var gameManager
   
   @State private var offset: CGSize = .zero
@@ -76,6 +77,24 @@ struct RoleCards: View {
           }
         }
     )
+    .overlay {
+      AdView(isMain: true, bannerId: .cardsBottomBanner)
+    }
+    .overlay(alignment: .top) {
+      HStack {
+        Button {
+          dismiss()
+        } label: {
+          Image(systemName: IconsEnum.arrowLeft.rawValue)
+            .padding(.horizontal, 30)
+            .padding(.vertical, 20)
+            .foregroundStyle(.mainBlack)
+        }
+        
+        Spacer()
+      }
+      .padding(.top, 40)
+    }
   }
 }
 

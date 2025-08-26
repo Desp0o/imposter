@@ -37,6 +37,8 @@ struct InGameView: View  {
             .foregroundStyle(.mainGray)
         }
       }
+      .padding(.top, 40)
+      .padding(.trailing, 10)
       
       Text("IMPOSTER")
         .customFontSytle(color: .mainGray, weight: .black, size: 42)
@@ -96,6 +98,11 @@ struct InGameView: View  {
             
             NewGameButton()
           }
+          
+          BannerViewContainer(bannerType: .inGameBanner)
+            .frame(maxWidth: .infinity)
+            .frame(height: 100)
+            .padding(.horizontal, 30)
         }
       }
     }
@@ -103,7 +110,7 @@ struct InGameView: View  {
     .padding()
     .onAppear {
       timeRemaining = gameManager.timeAmount * 60
-      
+    
       if let (index, _) = roles?
         .enumerated()
         .filter({ $0.element != .imposter })
