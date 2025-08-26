@@ -27,8 +27,9 @@ struct RulesAndSettingsComponent: View {
       
       Spacer()
       
-      Button {
-        
+      NavigationLink {
+        SettingsView()
+          .toolbar(.hidden)
       } label: {
         Image(systemName: IconsEnum.gearshape.rawValue)
           .resizable()
