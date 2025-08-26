@@ -6,8 +6,8 @@
 //
 
 enum LanguageEnum: String, CaseIterable, Identifiable {
-  case ka = "ka"
-  case en = "en"
+  case ka = "ქართული"
+  case en = "English"
   
   var id: String { rawValue }
 }

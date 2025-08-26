@@ -18,4 +18,5 @@ enum IconsEnum: String {
   case xmark
   case arrowUp = "arrow.up"
   case arrowLeft = "arrow.left"
+  case chevronRight = "chevron.right"
 }

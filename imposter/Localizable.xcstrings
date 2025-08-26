@@ -10,6 +10,9 @@
     "%lld" : {
 
     },
+    "© All rights reserved." : {
+
+    },
     "⏰ Time Limit" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -54,6 +57,9 @@
         }
       }
     },
+    "Change Language" : {
+
+    },
     "Choose Category" : {
       "localizations" : {
         "ka" : {
@@ -73,6 +79,9 @@
           }
         }
       }
+    },
+    "Contact" : {
+
     },
     "Disabled" : {
       "localizations" : {
@@ -169,6 +178,9 @@
         }
       }
     },
+    "Language selector" : {
+
+    },
     "Minutes" : {
       "localizations" : {
         "ka" : {
@@ -221,7 +233,19 @@
         }
       }
     },
+    "Pricacy Policy" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
     "Reveal imposter & word" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Share with Friends" : {
 
     },
     "Slide up to reveal" : {
