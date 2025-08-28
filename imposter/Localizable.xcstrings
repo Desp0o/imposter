@@ -40,6 +40,9 @@
     "⭐️" : {
 
     },
+    "⭐️ YOUR PLAN" : {
+
+    },
     "🎮 Players" : {
       "localizations" : {
         "ka" : {
@@ -70,6 +73,15 @@
         }
       }
     },
+    "$4.99/month" : {
+
+    },
+    "3 days free, then $19.99/year" : {
+
+    },
+    "and" : {
+
+    },
     "Change Language" : {
       "localizations" : {
         "ka" : {
@@ -79,6 +91,9 @@
           }
         }
       }
+    },
+    "Change Plan" : {
+
     },
     "Choose Category" : {
       "localizations" : {
@@ -280,6 +295,9 @@
         }
       }
     },
+    "Plan auto-renews for $4.99/month untill canceled." : {
+
+    },
     "Play" : {
       "localizations" : {
         "ka" : {
@@ -340,6 +358,9 @@
         }
       }
     },
+    "Restore Subscription" : {
+
+    },
     "Reveal imposter & word" : {
       "localizations" : {
         "ka" : {
@@ -375,7 +396,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "აწი სანახავად"
+            "value" : "აწიე სანახავად"
           }
         }
       }
@@ -390,6 +411,12 @@
         }
       }
     },
+    "Subscribe" : {
+
+    },
+    "Terms of Service" : {
+
+    },
     "time amount" : {
 
     },
@@ -402,6 +429,9 @@
           }
         }
       }
+    },
+    "Try It Free" : {
+
     },
     "Word: " : {
       "localizations" : {
