@@ -13,21 +13,18 @@ struct Subscription: View {
   @State private var iapManager = IAPManager.shared
   @State private var activePlan: String? = nil
   
-  @State private var buttonState = false
-  
   private let productIDs: [String] = IAPManager.shared.ids
   
   var body: some View {
     ScrollView {
       VStack(spacing: 0) {
-        
         VStack(spacing: 0) {
           Image("logo")
             .resizable()
             .scaledToFit()
             .offset(y: -60)
           
-          VStack {
+          VStack(spacing: 12) {
             Text("Unlock Full Access")
               .customFontSytle(color: .mainPink, weight: .bold, size: 20)
             
