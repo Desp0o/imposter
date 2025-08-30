@@ -16,7 +16,6 @@ final class GameManager {
   var timeAmount: Int = 3
   var isHintEnabled: Bool = false
   var isTimeLimitEnabled: Bool = false
-
   
   var categories: [CategoryModel] = [
     CategoryModel(id: 1, nameEng: "Everyday Objects", nameGeo: "ყოველდღიური", data: everydayObjectsData, isUnlocked: true),

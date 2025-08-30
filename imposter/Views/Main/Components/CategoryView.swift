@@ -11,6 +11,7 @@ import SwiftUI
 struct CategoryView: View {
   @Environment(GameManager.self) private var gameManager
   @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.sub.rawValue) private var currentSubscription: String?
   @Binding var isCategorySheetVisible: Bool
   
   var body: some View {
@@ -18,10 +19,12 @@ struct CategoryView: View {
       Text("Choose Category")
         .customFontSytle(weight: .bold, size: 24)
       
-      BannerViewContainer(bannerType: .categoryBanner)
-        .frame(maxWidth: .infinity)
-        .frame(height: 40)
-        .padding(.horizontal, 30)
+      if currentSubscription == nil {
+        BannerViewContainer(bannerType: .categoryBanner)
+          .frame(maxWidth: .infinity)
+          .frame(height: 40)
+          .padding(.horizontal, 30)
+      }
       
       ScrollView {
         VStack(spacing: 20) {
@@ -43,33 +46,44 @@ struct CategoryView: View {
               RoundedRectangle(cornerRadius: 8)
                 .stroke(.mainPink, lineWidth: 1)
             }
+            .if(currentSubscription == nil && category.isUnlocked == false) { view in
+              view.overlay(alignment: .trailing) {
+                Image(systemName: "lock")
+                  .foregroundStyle(.mainPink)
+                  .offset(x: -15)
+              }
+            }
             .contentShape(Rectangle())
             .onTapGesture {
-              if !gameManager.categories.contains(category) {
-                withAnimation(.smooth) {
-                  gameManager.categories.append(category)
-                }
-              } else {
-                withAnimation(.smooth) {
-                  guard gameManager.categories.count > 1 else { return }
-                  gameManager.categories.removeAll { category.id == $0.id }
+              if currentSubscription != nil {
+                if !gameManager.categories.contains(category) {
+                  withAnimation(.smooth) {
+                    gameManager.categories.append(category)
+                  }
+                } else {
+                  withAnimation(.smooth) {
+                    guard gameManager.categories.count > 1 else { return }
+                    gameManager.categories.removeAll { category.id == $0.id }
+                  }
                 }
               }
             }
           }
         }
+        .padding()
       }
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
       
-      BannerViewContainer(bannerType: .categoryBottom)
-        .frame(maxWidth: .infinity)
-        .frame(height: 40)
-        .padding(.horizontal, 30)
+      if currentSubscription == nil {
+        BannerViewContainer(bannerType: .categoryBottom)
+          .frame(maxWidth: .infinity)
+          .frame(height: 40)
+          .padding(.horizontal, 30)
+      }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .padding()
-    .padding(.top, 10)
+    .padding(.top, 20)
     .background(.mainBlack)
   }
 }
