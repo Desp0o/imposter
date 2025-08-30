@@ -133,46 +133,9 @@ struct SettingsView: View {
   SettingsView()
 }
 
-struct LanguageChangeView: View {
-  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
-  
-  var body: some View {
-    VStack {
-      Picker("Language selector", selection: $appLanguage) {
-        ForEach(LanguageEnum.allCases) { lang in
-          Text(lang.displayName).tag(lang)
-            .foregroundStyle(.mainWhite)
-            .onAppear {
-              print(lang)
-            }
-        }
-      }
-      .pickerStyle(.wheel)
-    }
-    .presentationDetents([.fraction(0.3)])
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(.mainBlack)
-  }
-}
 
 
-struct PrivacyPolicyView: View {
-  var body: some View {
-    ScrollView {
-      VStack(spacing: 20) {
-        Text("Pricacy Policy")
-          .customFontSytle(color: .mainWhite, weight: .bold, size: 20)
-        
-        Text(SettingsEnum.privacyPolicyText.rawValue)
-          .customFontSytle()
-      }
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .padding()
-    }
-    .scrollIndicators(.hidden)
-    .background(.mainBlack)
-  }
-}
+
 
 
 
