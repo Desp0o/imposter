@@ -10,4 +10,5 @@ struct CategoryModel: Identifiable, Equatable {
   let nameEng: String
   let nameGeo: String
   var data: [WordModel]
+  var isUnlocked: Bool
 }
