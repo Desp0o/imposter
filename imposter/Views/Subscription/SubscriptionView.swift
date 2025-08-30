@@ -9,6 +9,8 @@ import SwiftUI
 import StoreKit
 
 struct Subscription: View {
+  @Environment(\.dismiss) private var dismiss
+  
   @State private var isMonthlyActive: Bool = true
   @State private var iapManager = IAPManager.shared
   @State private var activePlan: String? = nil
@@ -35,7 +37,7 @@ struct Subscription: View {
           }
           .offset(y: -60)
         }
-    
+        
         VStack(spacing: 12) {
           SubscriptionPrivacyPolicy()
           
@@ -185,6 +187,22 @@ struct Subscription: View {
         ProgressView()
           .scaleEffect(2)
           .tint(.mainPink)
+      }
+    }
+    .overlay(alignment: .topTrailing) {
+      HStack {
+        Spacer()
+        
+        Button {
+          dismiss()
+        } label: {
+          Image(systemName: IconsEnum.xmark.rawValue)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 18, height: 18)
+            .foregroundStyle(.gray)
+        }
+        .offset(x: -30, y: 30)
       }
     }
   }
