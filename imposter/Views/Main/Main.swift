@@ -191,8 +191,10 @@ struct Main: View {
         .padding(30)
       }
       .scrollIndicators(.hidden)
-      .overlay {
-        AdView(isMain: true, bannerId: .banner)
+      .if(IAPManager.shared.activePlan == nil) { view in
+        view.overlay {
+          AdView(isMain: true, bannerId: .banner)
+        }
       }
       .background(.mainBlack)
     }
