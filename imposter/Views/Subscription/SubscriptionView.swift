@@ -83,6 +83,7 @@ struct Subscription: View {
                   HStack {
                     Text("3 days free, then $19.99/year")
                       .customFontSytle(size: 14)
+                      .multilineTextAlignment(.leading)
                     
                     Spacer()
                     

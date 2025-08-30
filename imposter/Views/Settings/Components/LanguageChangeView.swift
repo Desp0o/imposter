@@ -17,9 +17,6 @@ struct LanguageChangeView: View {
         ForEach(LanguageEnum.allCases) { lang in
           Text(lang.displayName).tag(lang)
             .foregroundStyle(.mainWhite)
-            .onAppear {
-              print(lang)
-            }
         }
       }
       .pickerStyle(.wheel)
