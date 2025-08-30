@@ -21,8 +21,6 @@ struct PrivacyPolicyView: View {
         switch appLanguage {
         case .ka:
           Text("""
-                      [თქვენი კომპანიის სახელი] ("ჩვენ", "ჩვენი" ან "ჩვენ") ოპერირებს Imposter მობილურ აპლიკაციას (შემდგომში "სერვისი").
-                      
                       ეს გვერდი გაცნობებთ ჩვენს პოლიტიკას პერსონალურ მონაცემებთან დაკავშირებით, როდესაც იყენებთ ჩვენს სერვისს.
                       
                       **1. მონაცემთა შეგროვება და გამოყენება**
@@ -61,8 +59,6 @@ struct PrivacyPolicyView: View {
           .customFontSytle()
         case .en:
           Text("""
-                              [Your Company Name] ("we", "our", or "us") operates the Imposter mobile application (hereinafter "Service").
-                              
                               This page informs you of our policies regarding personal data when you use our Service.
                               
                               **1. Data Collection and Use**

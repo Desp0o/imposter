@@ -13,6 +13,7 @@ struct SettingsView: View {
   
   @State private var isLanguageSheetVisible: Bool = false
   @State private var isPrivacyPolicyVisible: Bool = false
+  @State private var isTermsVisible: Bool = false
   @State private var isMailSheetVisible: Bool = false
   
   var body: some View {
@@ -47,6 +48,20 @@ struct SettingsView: View {
                 Image(systemName: IconsEnum.chevronRight.rawValue)
                   .foregroundStyle(.mainBlack)
               }
+            }
+          }
+          
+          Button {
+            isTermsVisible = true
+          } label: {
+            HStack {
+              Text("Terms of Service")
+                .customFontSytle()
+              
+              Spacer()
+              
+              Image(systemName: IconsEnum.chevronRight.rawValue)
+                .foregroundStyle(.mainBlack)
             }
           }
           
@@ -115,6 +130,9 @@ struct SettingsView: View {
     }
     .sheet(isPresented: $isLanguageSheetVisible) {
       LanguageChangeView()
+    }
+    .sheet(isPresented: $isTermsVisible) {
+      TermsofService()
     }
     .sheet(isPresented: $isPrivacyPolicyVisible) {
       PrivacyPolicyView()
