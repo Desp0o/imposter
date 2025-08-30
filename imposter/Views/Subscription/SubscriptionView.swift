@@ -156,7 +156,9 @@ struct Subscription: View {
                 )
                 
                 Button {
-                  
+                  Task {
+                    try await iapManager.restoreSubscription()
+                  }
                 } label: {
                   Text("Restore Subscription")
                     .customFontSytle(color: .mainPink, weight: .bold, size: 16)
@@ -176,6 +178,13 @@ struct Subscription: View {
         } else {
           isMonthlyActive = false
         }
+      }
+    }
+    .overlay {
+      if iapManager.isSyncingSub {
+        ProgressView()
+          .scaleEffect(2)
+          .tint(.mainPink)
       }
     }
   }

@@ -19,6 +19,7 @@ struct PurchaseItemModel {
 final class IAPManager {
   static let shared = IAPManager()
   var activePlan: String? = nil
+  var isSyncingSub: Bool = false
   
   private var transactionListener: Task<Void, Never>? = nil
   var purchaseCanceled: Bool = false
@@ -140,6 +141,25 @@ final class IAPManager {
     
     if let latestStatus = await fetchLastActiveSubscription() {
       activePlan = latestStatus
+    }
+  }
+  
+  @MainActor
+  func restoreSubscription() async throws {
+    isSyncingSub = true
+    
+    defer {
+      isSyncingSub = false
+    }
+    
+    do {
+      try await AppStore.sync()
+      
+      if let sub = await fetchLastActiveSubscription() {
+        activePlan = sub
+      }
+    } catch {
+      dump(error)
     }
   }
 }
