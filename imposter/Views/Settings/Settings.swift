@@ -90,9 +90,11 @@ struct SettingsView: View {
           .customFontSytle(color: .mainGray, weight: .medium, size: 14)
       }
       
-      BannerViewContainer(bannerType: .settingsBanner)
-        .frame(maxWidth: .infinity)
-        .frame(height: 300)
+      if IAPManager.shared.activePlan == nil {
+        BannerViewContainer(bannerType: .settingsBanner)
+          .frame(maxWidth: .infinity)
+          .frame(height: 300)
+      }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     .padding(30)

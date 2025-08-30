@@ -37,8 +37,10 @@ struct GameView: View {
       randomWord = gameManager.generateRandomWord()
       roles = gameManager.assignRoles()
     }
-    .overlay {
-      AdView(isMain: false, bannerId: .cardBanner)
+    .if(IAPManager.shared.activePlan == nil) { view in
+      view.overlay {
+        AdView(isMain: false, bannerId: .cardBanner)
+      }
     }
 }
 }

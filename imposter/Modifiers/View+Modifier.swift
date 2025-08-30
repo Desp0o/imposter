@@ -29,3 +29,14 @@ extension View {
     .clipShape(RoundedRectangle(cornerRadius: 8))
   }
 }
+
+extension View {
+  @ViewBuilder
+  func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+    if condition {
+      transform(self)
+    } else {
+      self
+    }
+  }
+}

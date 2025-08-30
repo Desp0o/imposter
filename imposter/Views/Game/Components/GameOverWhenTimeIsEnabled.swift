@@ -47,10 +47,12 @@ struct GameOverWhenTimeIsEnabled: View {
         }
       }
       
-      BannerViewContainer(bannerType: .inGameBanner)
-        .frame(maxWidth: .infinity)
-        .frame(height: 100)
-        .padding(.horizontal, 30)
+      if IAPManager.shared.activePlan == nil {
+        BannerViewContainer(bannerType: .inGameBanner)
+          .frame(maxWidth: .infinity)
+          .frame(height: 100)
+          .padding(.horizontal, 30)
+      }
     }
   }
 }

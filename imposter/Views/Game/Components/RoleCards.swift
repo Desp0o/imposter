@@ -50,6 +50,7 @@ struct RoleCards: View {
       } else {
         VStack(spacing: 10) {
           Image(systemName: IconsEnum.arrowUp.rawValue)
+            .foregroundStyle(.mainBlack)
           
           Text("Slide up to reveal")
             .customFontSytle(color: .mainBlack)
@@ -77,8 +78,10 @@ struct RoleCards: View {
           }
         }
     )
-    .overlay {
-      AdView(isMain: true, bannerId: .cardsBottomBanner)
+    .if(IAPManager.shared.activePlan == nil) { view in
+      view.overlay {
+        AdView(isMain: true, bannerId: .cardsBottomBanner)
+      }
     }
     .overlay(alignment: .top) {
       HStack {
@@ -93,7 +96,9 @@ struct RoleCards: View {
         
         Spacer()
       }
-      .padding(.top, 40)
+      .if(IAPManager.shared.activePlan == nil) { view in
+        view.padding(.top, 40)
+      }
     }
   }
 }

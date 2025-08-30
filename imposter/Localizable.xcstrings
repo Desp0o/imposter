@@ -40,6 +40,16 @@
     "⭐️" : {
 
     },
+    "⭐️ YOUR PLAN" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⭐️ მიმდინარე"
+          }
+        }
+      }
+    },
     "🎮 Players" : {
       "localizations" : {
         "ka" : {
@@ -70,12 +80,62 @@
         }
       }
     },
+    "$4.99/month" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "$4.99/თვე"
+          }
+        }
+      }
+    },
+    "3 days free, then $19.99/year" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 დღე უფასო, $19.99/წელი"
+          }
+        }
+      }
+    },
+    "Access all categories, features and no ADS!" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ყველა კატეგორია რეკლამების გარეშე"
+          }
+        }
+      }
+    },
+    "and" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "და"
+          }
+        }
+      }
+    },
     "Change Language" : {
       "localizations" : {
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ენის შეცვლა"
+          }
+        }
+      }
+    },
+    "Change Plan" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოწერის შეცვლა"
           }
         }
       }
@@ -280,6 +340,16 @@
         }
       }
     },
+    "Plan auto-renews for $4.99/month untill canceled." : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ავტომატური ყოველთვიური განახლება"
+          }
+        }
+      }
+    },
     "Play" : {
       "localizations" : {
         "ka" : {
@@ -340,6 +410,16 @@
         }
       }
     },
+    "Restore Subscription" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოწერის აღდგენა"
+          }
+        }
+      }
+    },
     "Reveal imposter & word" : {
       "localizations" : {
         "ka" : {
@@ -375,7 +455,7 @@
         "ka" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "აწი სანახავად"
+            "value" : "აწიე სანახავად"
           }
         }
       }
@@ -390,6 +470,26 @@
         }
       }
     },
+    "Subscribe" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "გამოწერა"
+          }
+        }
+      }
+    },
+    "Terms of Service" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "პირობები"
+          }
+        }
+      }
+    },
     "time amount" : {
 
     },
@@ -399,6 +499,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "დროა ისაუბროთ და დაიჭიროთ ჯაშუში."
+          }
+        }
+      }
+    },
+    "Try It Free" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ცადე უფასოდ"
+          }
+        }
+      }
+    },
+    "Unlock Full Access" : {
+      "localizations" : {
+        "ka" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "სრული პაკეტი"
           }
         }
       }

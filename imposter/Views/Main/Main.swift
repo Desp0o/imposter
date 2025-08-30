@@ -17,6 +17,7 @@ struct Main: View {
   @State private var isRulesSheetVisible: Bool = false
   @State private var isTimeSheetVisible: Bool = false
   @State private var isCategorySheetVisible: Bool = false
+  @State private var isSubscriptionVisible: Bool = false
   
   var body: some View {
     NavigationStack {
@@ -25,6 +26,7 @@ struct Main: View {
           RulesAndSettingsComponent(isRulesSheetVisible: $isRulesSheetVisible)
             .sheet(isPresented: $isRulesSheetVisible) {
               RulesView(isRulesSheetVisible: $isRulesSheetVisible)
+                .presentationBackground(.mainBlack)
             }
           
           VStack(spacing: 20) {
@@ -135,7 +137,7 @@ struct Main: View {
             
             HStack(spacing: 12) {
               Button {
-                
+                isSubscriptionVisible = true
               } label: {
                 Text("⭐️")
                   .customFontSytle()
@@ -165,15 +167,23 @@ struct Main: View {
           .sheet(isPresented: $isLocalsAddSheetVisible) {
             LocalsCount(isLocalsAddSheetVisible: $isLocalsAddSheetVisible
             )
+            .presentationBackground(.mainBlack)
           }
           .sheet(isPresented: $isImposterAddSheetVisible) {
             ImposterCount(isImposterAddSheetVisible: $isImposterAddSheetVisible)
+              .presentationBackground(.mainBlack)
           }
           .sheet(isPresented: $isTimeSheetVisible) {
             TimeSetup(isTimeSheetVisible: $isTimeSheetVisible)
+              .presentationBackground(.mainBlack)
           }
           .sheet(isPresented: $isCategorySheetVisible) {
             CategoryView(isCategorySheetVisible: $isCategorySheetVisible)
+              .presentationBackground(.mainBlack)
+          }
+          .sheet(isPresented: $isSubscriptionVisible) {
+            Subscription()
+              .presentationBackground(.mainBlack)
           }
           .toolbar(.hidden, for: .tabBar)
         }
@@ -181,10 +191,12 @@ struct Main: View {
         .padding(30)
       }
       .scrollIndicators(.hidden)
-      .background(.mainBlack)
-      .overlay {
-        AdView(isMain: true, bannerId: .banner)
+      .if(IAPManager.shared.activePlan == nil) { view in
+        view.overlay {
+          AdView(isMain: true, bannerId: .banner)
+        }
       }
+      .background(.mainBlack)
     }
   }
   
