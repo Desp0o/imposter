@@ -5,8 +5,6 @@
 //  Created by Tornike Despotashvili on 8/26/25.
 //
 
-//ca-app-pub-2568329825158793/2869892604
-
 import SwiftUI
 import GoogleMobileAds
 import UIKit

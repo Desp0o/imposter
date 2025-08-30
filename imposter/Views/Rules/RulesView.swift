@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct RulesView: View {
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
   @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
+  
   @Binding var isRulesSheetVisible: Bool
   
   let rulesEng: [String] = [
@@ -64,7 +66,7 @@ struct RulesView: View {
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
       
-      if IAPManager.shared.activePlan == nil {
+      if activeSubscribe == nil {
         BannerViewContainer(bannerType: .ruleBanner)
           .frame(maxWidth: .infinity)
           .frame(height: 50)

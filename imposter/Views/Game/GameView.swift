@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameView: View {
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+
   @Environment(GameManager.self) private var gameManager
   
   @State private var randomWord: WordModel? = nil
@@ -37,7 +39,7 @@ struct GameView: View {
       randomWord = gameManager.generateRandomWord()
       roles = gameManager.assignRoles()
     }
-    .if(IAPManager.shared.activePlan == nil) { view in
+    .if(activeSubscribe == nil) { view in
       view.overlay {
         AdView(isMain: false, bannerId: .cardBanner)
       }

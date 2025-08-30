@@ -9,6 +9,8 @@ import SwiftUI
 import MessageUI
 
 struct SettingsView: View {
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+
   @Environment(\.dismiss) private var dismiss
   
   @State private var isLanguageSheetVisible: Bool = false
@@ -105,7 +107,7 @@ struct SettingsView: View {
           .customFontSytle(color: .mainGray, weight: .medium, size: 14)
       }
       
-      if IAPManager.shared.activePlan == nil {
+      if activeSubscribe == nil {
         BannerViewContainer(bannerType: .settingsBanner)
           .frame(maxWidth: .infinity)
           .frame(height: 300)

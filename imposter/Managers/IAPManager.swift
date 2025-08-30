@@ -18,14 +18,13 @@ struct PurchaseItemModel {
 @Observable
 final class IAPManager {
   static let shared = IAPManager()
-  var activePlan: String? = nil
-  var isSyncingSub: Bool = false
-  
   private var transactionListener: Task<Void, Never>? = nil
+
+  var isSyncingSub: Bool = false
   var purchaseCanceled: Bool = false
   var purchaseError: Bool = false
-  
   var products: [Product] = []
+  
   let ids: [String] = [
     SubscriptionEnum.monthly.rawValue,
     SubscriptionEnum.yearly.rawValue
@@ -36,7 +35,7 @@ final class IAPManager {
       await fetchProducts()
       
       if let latestStatus = await fetchLastActiveSubscription() {
-        activePlan = latestStatus
+        UserDefaults.standard.set(latestStatus, forKey: "currentSubscribe")
       }
     }
   }
@@ -140,7 +139,7 @@ final class IAPManager {
     await purchase(product)
     
     if let latestStatus = await fetchLastActiveSubscription() {
-      activePlan = latestStatus
+      UserDefaults.standard.set(latestStatus, forKey: "currentSubscribe")
     }
   }
   
@@ -156,7 +155,7 @@ final class IAPManager {
       try await AppStore.sync()
       
       if let sub = await fetchLastActiveSubscription() {
-        activePlan = sub
+        UserDefaults.standard.set(sub, forKey: "currentSubscribe")
       }
     } catch {
       dump(error)

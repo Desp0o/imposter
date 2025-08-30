@@ -10,7 +10,8 @@ import StoreKit
 
 struct Subscription: View {
   @Environment(\.dismiss) private var dismiss
-  
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+
   @State private var isMonthlyActive: Bool = true
   @State private var iapManager = IAPManager.shared
   @State private var activePlan: String? = nil
@@ -60,12 +61,12 @@ struct Subscription: View {
                     ))
                   }
                   
-                  if iapManager.activePlan == SubscriptionEnum.monthly.rawValue {
+                  if activeSubscribe == SubscriptionEnum.monthly.rawValue {
                     ActivePlanIndicator()
                   }
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: iapManager.activePlan == SubscriptionEnum.monthly.rawValue ? 70 : 48)
+                .frame(height: activeSubscribe == SubscriptionEnum.monthly.rawValue ? 70 : 48)
                 .padding(.horizontal, 20)
                 .background(.mainGray)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -90,12 +91,12 @@ struct Subscription: View {
                     SubscriptionCheckMark(isMonthlyActive: $isMonthlyActive)
                   }
                   
-                  if iapManager.activePlan == SubscriptionEnum.yearly.rawValue {
+                  if activeSubscribe == SubscriptionEnum.yearly.rawValue {
                     ActivePlanIndicator()
                   }
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: iapManager.activePlan == SubscriptionEnum.yearly.rawValue ? 70 : 48)
+                .frame(height: activeSubscribe == SubscriptionEnum.yearly.rawValue ? 70 : 48)
                 .padding(.horizontal, 20)
                 .background(.mainGray)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -129,12 +130,12 @@ struct Subscription: View {
                   }
                 } label: {
                   Group {
-                    if iapManager.activePlan == nil {
+                    if activeSubscribe == nil {
                       Text(isMonthlyActive ? "Subscribe" : "Try It Free")
                         .customFontSytle(color: .mainBlack, weight: .bold, size: 20)
                     } else {
-                      if iapManager.activePlan == SubscriptionEnum.monthly.rawValue && isMonthlyActive ||
-                          iapManager.activePlan == SubscriptionEnum.yearly.rawValue && !isMonthlyActive {
+                      if activeSubscribe == SubscriptionEnum.monthly.rawValue && isMonthlyActive ||
+                          activeSubscribe == SubscriptionEnum.yearly.rawValue && !isMonthlyActive {
                         Text("Subscribe")
                           .customFontSytle(color: .mainBlack, weight: .bold, size: 20)
                       } else {
@@ -150,12 +151,12 @@ struct Subscription: View {
                   .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .disabled(
-                  iapManager.activePlan == SubscriptionEnum.monthly.rawValue && isMonthlyActive ||
-                  iapManager.activePlan == SubscriptionEnum.yearly.rawValue && !isMonthlyActive ? true : false
+                  activeSubscribe == SubscriptionEnum.monthly.rawValue && isMonthlyActive ||
+                  activeSubscribe == SubscriptionEnum.yearly.rawValue && !isMonthlyActive ? true : false
                 )
                 .opacity(
-                  iapManager.activePlan == SubscriptionEnum.monthly.rawValue && isMonthlyActive ||
-                  iapManager.activePlan == SubscriptionEnum.yearly.rawValue && !isMonthlyActive ? 0.3 : 1
+                  activeSubscribe == SubscriptionEnum.monthly.rawValue && isMonthlyActive ||
+                  activeSubscribe == SubscriptionEnum.yearly.rawValue && !isMonthlyActive ? 0.3 : 1
                 )
                 
                 Button {
@@ -176,7 +177,7 @@ struct Subscription: View {
       .background(.mainBlack)
       .foregroundStyle(.mainWhite)
       .onAppear {
-        if iapManager.activePlan == SubscriptionEnum.monthly.rawValue {
+        if activeSubscribe == SubscriptionEnum.monthly.rawValue {
           isMonthlyActive = true
         } else {
           isMonthlyActive = false

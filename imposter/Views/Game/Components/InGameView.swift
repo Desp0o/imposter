@@ -9,7 +9,8 @@ import SwiftUI
 
 struct InGameView: View  {
   @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
-  
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+
   @Environment(GameManager.self) private var gameManager
   @Environment(\.dismiss) private var dismiss
   
@@ -37,7 +38,7 @@ struct InGameView: View  {
             .foregroundStyle(.mainGray)
         }
       }
-      .if(IAPManager.shared.activePlan == nil) { view in
+      .if(activeSubscribe == nil) { view in
         view.padding(.top, 40)
       }
       .padding(.trailing, 10)
@@ -101,7 +102,7 @@ struct InGameView: View  {
             NewGameButton()
           }
           
-          if IAPManager.shared.activePlan == nil {
+          if activeSubscribe == nil {
             BannerViewContainer(bannerType: .inGameBanner)
               .frame(maxWidth: .infinity)
               .frame(height: 100)

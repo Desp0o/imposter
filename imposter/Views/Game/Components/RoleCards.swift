@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct RoleCards: View {
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+
   @Environment(\.dismiss) private var dismiss
   @Environment(GameManager.self) private var gameManager
   
@@ -78,7 +80,7 @@ struct RoleCards: View {
           }
         }
     )
-    .if(IAPManager.shared.activePlan == nil) { view in
+    .if(activeSubscribe == nil) { view in
       view.overlay {
         AdView(isMain: true, bannerId: .cardsBottomBanner)
       }
@@ -96,7 +98,7 @@ struct RoleCards: View {
         
         Spacer()
       }
-      .if(IAPManager.shared.activePlan == nil) { view in
+      .if(activeSubscribe == nil) { view in
         view.padding(.top, 40)
       }
     }

@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-struct GameOverWhenTimeIsEnabled: View {  
+struct GameOverWhenTimeIsEnabled: View {
+  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+
   @State private var isLastSeconds: Bool = false
   
   @Binding var isGameOver: Bool
@@ -47,7 +49,7 @@ struct GameOverWhenTimeIsEnabled: View {
         }
       }
       
-      if IAPManager.shared.activePlan == nil {
+      if activeSubscribe == nil {
         BannerViewContainer(bannerType: .inGameBanner)
           .frame(maxWidth: .infinity)
           .frame(height: 100)

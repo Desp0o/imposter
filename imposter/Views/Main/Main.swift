@@ -11,7 +11,8 @@ import SwiftUI
 struct Main: View {
   @Environment(GameManager.self) private var gameManager
   @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
-  
+  @AppStorage("currentSubscribe") private var activeSubscribe: String? 
+
   @State private var isLocalsAddSheetVisible: Bool = false
   @State private var isImposterAddSheetVisible: Bool = false
   @State private var isRulesSheetVisible: Bool = false
@@ -191,7 +192,7 @@ struct Main: View {
         .padding(30)
       }
       .scrollIndicators(.hidden)
-      .if(IAPManager.shared.activePlan == nil) { view in
+      .if(activeSubscribe == nil) { view in
         view.overlay {
           AdView(isMain: true, bannerId: .banner)
         }
