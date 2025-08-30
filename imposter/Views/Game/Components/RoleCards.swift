@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RoleCards: View {
-  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+  @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
 
   @Environment(\.dismiss) private var dismiss
   @Environment(GameManager.self) private var gameManager

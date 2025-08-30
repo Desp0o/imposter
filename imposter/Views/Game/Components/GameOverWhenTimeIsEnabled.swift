@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct GameOverWhenTimeIsEnabled: View {
-  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+  @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
 
   @State private var isLastSeconds: Bool = false
   

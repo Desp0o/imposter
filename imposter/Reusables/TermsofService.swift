@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TermsofService: View {
-  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
   
   var body: some View {
     ScrollView {

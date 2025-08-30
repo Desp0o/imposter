@@ -5,15 +5,10 @@
 //  Created by Tornike Despotashvili on 8/26/25.
 //
 
-
 import Foundation
 import StoreKit
 import Observation
 
-struct PurchaseItemModel {
-  let id: String
-  let value: Int
-}
 
 @Observable
 final class IAPManager {
@@ -35,7 +30,7 @@ final class IAPManager {
       await fetchProducts()
       
       if let latestStatus = await fetchLastActiveSubscription() {
-        UserDefaults.standard.set(latestStatus, forKey: "currentSubscribe")
+        UserDefaults.standard.set(latestStatus, forKey: AppStorageEnum.sub.rawValue)
       }
     }
   }

@@ -10,7 +10,7 @@ import StoreKit
 
 struct Subscription: View {
   @Environment(\.dismiss) private var dismiss
-  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+  @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
 
   @State private var isMonthlyActive: Bool = true
   @State private var iapManager = IAPManager.shared

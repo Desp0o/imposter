@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CategoryView: View {
   @Environment(GameManager.self) private var gameManager
-  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
   @Binding var isCategorySheetVisible: Bool
   
   var body: some View {

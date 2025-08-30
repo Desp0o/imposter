@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+  @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
 
   @Environment(GameManager.self) private var gameManager
   

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct InGameView: View  {
-  @AppStorage("appLanguage") private var appLanguage: LanguageEnum = .ka
-  @AppStorage("currentSubscribe") private var activeSubscribe: String?
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
 
   @Environment(GameManager.self) private var gameManager
   @Environment(\.dismiss) private var dismiss
