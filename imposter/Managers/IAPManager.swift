@@ -44,7 +44,7 @@ final class IAPManager {
     do {
       products = try await Product.products(for: ids)
     } catch {
-      print("❌ Failed to fetch products: \(error)")
+      dump(error)
     }
   }
   
@@ -57,7 +57,7 @@ final class IAPManager {
       case .success(let verification):
         isSyncingSub = false
         let transaction = try checkVerified(verification)
-        print("✅ Purchase success: \(transaction.productID)")
+
         await transaction.finish()
         
       case .userCancelled:
@@ -67,7 +67,6 @@ final class IAPManager {
       }
     } catch {
       purchaseError = true
-      print("❌ Purchase failed: \(error)")
     }
   }
   
@@ -79,9 +78,8 @@ final class IAPManager {
         do {
           let transaction = try self.checkVerified(result)
           await transaction.finish()
-          print("✅ Transaction update: \(transaction.productID)")
         } catch {
-          print("❌ Transaction verification failed: \(error)")
+          dump(error)
         }
       }
     }
@@ -114,14 +112,13 @@ final class IAPManager {
         switch renewalInfoResult {
         case .verified(let renewalInfo):
           return renewalInfo.autoRenewPreference ?? renewalInfo.currentProductID
-        case .unverified(let renewalInfo, let error):
-          print("⚠️ Unverified renewalInfo: \(renewalInfo), error: \(error)")
+        case .unverified(_, _):
           return nil
         }
       }
       
     } catch {
-      print("❌ Error fetching subscription status: \(error)")
+      dump(error)
     }
     return nil
   }
@@ -129,10 +126,7 @@ final class IAPManager {
   @MainActor
   func buyProduct(withID id: String) async {
     isSyncingSub =  true
-    guard let product = products.first(where: { $0.id == id }) else {
-      print("Product not found for \(id)")
-      return
-    }
+    guard let product = products.first(where: { $0.id == id }) else { return }
     
     await purchase(product)
     

@@ -68,7 +68,6 @@ struct RoleCards: View {
           if value.translation.height < 0 {
             withAnimation {
               offset.height = max(value.translation.height, -150)
-              print(offset.height)
             }
           }
         }
