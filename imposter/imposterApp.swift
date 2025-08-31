@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct imposterApp: App {
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
   @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscription: String?
-
+  
   @State private var gameManager = GameManager()
   
   init() {

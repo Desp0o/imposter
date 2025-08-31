@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CardUndercover: View {
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
   @Environment(GameManager.self) private var gameManager
   
   @Binding var randomWord: WordModel?

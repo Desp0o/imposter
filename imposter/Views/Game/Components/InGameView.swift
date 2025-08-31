@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InGameView: View  {
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
   @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
 
   @Environment(GameManager.self) private var gameManager

@@ -203,8 +203,11 @@ struct Subscription: View {
             .scaledToFit()
             .frame(width: 18, height: 18)
             .foregroundStyle(.gray)
+            .padding()
         }
-        .offset(x: -30, y: 30)
+        .padding(.trailing, 20)
+        .padding(.top, 20)
+        .contentShape(Rectangle())
       }
     }
   }

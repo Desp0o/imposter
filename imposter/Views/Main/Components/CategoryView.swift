@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CategoryView: View {
   @Environment(GameManager.self) private var gameManager
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
   @AppStorage(AppStorageEnum.sub.rawValue) private var currentSubscription: String?
   @Binding var isCategorySheetVisible: Bool
   
@@ -32,7 +32,7 @@ struct CategoryView: View {
             HStack {
               Text(appLanguage == .ka ? category.nameGeo : category.nameEng)
                 .customFontSytle(
-                  color: gameManager.categories.contains(category)
+                  color: gameManager.categories.contains(where: { $0.id == category.id })
                   ? .mainBlack : .mainWhite,
                   weight: .semibold
                 )
@@ -40,7 +40,9 @@ struct CategoryView: View {
               Spacer()
             }
             .padding()
-            .background(gameManager.categories.contains(category) ? .mainPink : .clear)
+            .background(
+                gameManager.categories.contains(where: { $0.id == category.id }) ? .mainPink : .clear
+            )
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay {
               RoundedRectangle(cornerRadius: 8)
@@ -48,7 +50,7 @@ struct CategoryView: View {
             }
             .if(currentSubscription == nil && category.isUnlocked == false) { view in
               view.overlay(alignment: .trailing) {
-                Image(systemName: "lock")
+                Image(systemName: IconsEnum.lock.rawValue)
                   .foregroundStyle(.mainPink)
                   .offset(x: -15)
               }

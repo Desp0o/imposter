@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RulesView: View {
   @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
   
   @Binding var isRulesSheetVisible: Bool
   

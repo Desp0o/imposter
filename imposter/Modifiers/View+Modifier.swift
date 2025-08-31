@@ -40,3 +40,16 @@ extension View {
     }
   }
 }
+
+extension View {
+  func swipeToDismiss(dismiss: DismissAction) -> some View {
+    self.gesture(
+      DragGesture()
+        .onEnded { value in
+          if value.translation.width > 100 {
+            dismiss()
+          }
+        }
+    )
+  }
+}

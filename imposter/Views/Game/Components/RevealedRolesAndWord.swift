@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RevealedRolesAndWord: View {
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
 
   @Binding var randomWord: WordModel?
   @Binding var impostersWithIndices: [(index: Int, role: Role)]

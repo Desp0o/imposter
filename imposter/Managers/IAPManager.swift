@@ -55,6 +55,7 @@ final class IAPManager {
       
       switch result {
       case .success(let verification):
+        isSyncingSub = false
         let transaction = try checkVerified(verification)
         print("✅ Purchase success: \(transaction.productID)")
         await transaction.finish()
@@ -125,7 +126,9 @@ final class IAPManager {
     return nil
   }
   
+  @MainActor
   func buyProduct(withID id: String) async {
+    isSyncingSub =  true
     guard let product = products.first(where: { $0.id == id }) else {
       print("Product not found for \(id)")
       return

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Main: View {
   @Environment(GameManager.self) private var gameManager
-  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .ka
+  @AppStorage(AppStorageEnum.language.rawValue) private var appLanguage: LanguageEnum = .en
   @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String? 
 
   @State private var isLocalsAddSheetVisible: Bool = false

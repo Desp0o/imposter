@@ -33,7 +33,7 @@ final class GameManager {
   
   func assignRoles() -> [Role] {
     let roles: [Role] = Array(repeating: .imposter, count: impostersQuantity) +
-    Array(repeating: .local, count: localsQuantity)
+    Array(repeating: .local, count: localsQuantity - impostersQuantity)
     
     return roles.shuffled()
   }

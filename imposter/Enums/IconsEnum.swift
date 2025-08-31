@@ -20,4 +20,5 @@ enum IconsEnum: String {
   case arrowLeft = "arrow.left"
   case chevronRight = "chevron.right"
   case checkMark = "checkmark.circle.fill"
+  case lock
 }

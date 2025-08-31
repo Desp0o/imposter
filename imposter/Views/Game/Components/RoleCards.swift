@@ -10,12 +10,12 @@ import SwiftUI
 
 struct RoleCards: View {
   @AppStorage(AppStorageEnum.sub.rawValue) private var activeSubscribe: String?
-
+  
   @Environment(\.dismiss) private var dismiss
   @Environment(GameManager.self) private var gameManager
   
   @State private var offset: CGSize = .zero
-
+  
   @Binding var curretnRole: Int
   @Binding var isAssigned: Bool
   @Binding var roles: [Role]?
@@ -43,12 +43,13 @@ struct RoleCards: View {
           Text(curretnRole == (roles?.count ?? 0) - 1 ? "Play" : "Next Player")
             .customFontSytle()
             .padding()
+            .padding(.horizontal, 60)
             .background(
               RoundedRectangle(cornerRadius: 12)
                 .fill(.mainBlack)
             )
         }
-        .offset(y: -100)
+        .offset(y: -200)
       } else {
         VStack(spacing: 10) {
           Image(systemName: IconsEnum.arrowUp.rawValue)
@@ -66,17 +67,21 @@ struct RoleCards: View {
         .onChanged { value in
           if value.translation.height < 0 {
             withAnimation {
-              offset.height = max(value.translation.height, -200)
+              offset.height = max(value.translation.height, -150)
+              print(offset.height)
             }
           }
         }
         .onEnded { _ in
-          withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.3)) {
-            offset = .zero
-          }
-          
-          withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.3)) {
-            isAssigned = true
+          if offset.height <= -100 {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.3)) {
+              isAssigned = true
+              offset = .zero
+            }
+          } else {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.75, blendDuration: 0.3)) {
+              offset = .zero
+            }
           }
         }
     )

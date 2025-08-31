@@ -114,6 +114,7 @@ struct SettingsView: View {
       }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    .swipeToDismiss(dismiss: dismiss)
     .padding(30)
     .background(.mainBlack)
     .overlay(alignment: .top) {
@@ -124,7 +125,7 @@ struct SettingsView: View {
           Image(systemName: IconsEnum.arrowLeft.rawValue)
             .foregroundStyle(.mainPink)
         }
-        .padding(.vertical, 5)
+        .padding(.vertical, 10)
         .padding(.horizontal, 30)
         
         Spacer()
