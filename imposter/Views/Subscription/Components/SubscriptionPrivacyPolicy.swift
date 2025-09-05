@@ -18,7 +18,7 @@ struct SubscriptionPrivacyPolicy: View {
         isTermsVisible = true
       } label: {
         Text("Terms of Service")
-          .customFontSytle(color: .mainPink, size: 12)
+          .customFontSytle(color: .mainRed, size: 12)
       }
       
       Text("and")
@@ -28,7 +28,7 @@ struct SubscriptionPrivacyPolicy: View {
         isPrivacyVisible = true
       } label: {
         Text("Privacy Policy")
-          .customFontSytle(color: .mainPink, size: 12)
+          .customFontSytle(color: .mainRed, size: 12)
       }
     }
     .sheet(isPresented: $isTermsVisible) {

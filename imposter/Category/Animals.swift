@@ -39,9 +39,9 @@ let animalsData: [WordModel] = [
     WordModel(eng: "Peacock", geo: "ფარშევანგი", engHint: "display", geoHint: "გამოფენა"),
     WordModel(eng: "Swan", geo: "გედი", engHint: "elegant", geoHint: "ელეგანტური"),
 
-    WordModel(eng: "Duck", geo: "იხვი", engHint: "quack", geoHint: "ყვავი"),
+    
     WordModel(eng: "Goose", geo: "ბატი", engHint: "honk", geoHint: "ყიყინი"),
-    WordModel(eng: "Turkey", geo: "ინდაური", engHint: "gobble", geoHint: "ღუღუნი"),
+    WordModel(eng: "Turkey", geo: "ინდაური", engHint: "gobble", geoHint: "ამერიკა"),
     WordModel(eng: "Rooster", geo: "მამალი", engHint: "crow", geoHint: "დილა"),
     WordModel(eng: "Pigeon", geo: "მტრედი", engHint: "coo", geoHint: "ღუღუნი"),
     WordModel(eng: "Sparrow", geo: "ბეღურა", engHint: "small", geoHint: "პატარა"),
@@ -50,7 +50,7 @@ let animalsData: [WordModel] = [
     
     WordModel(eng: "Bat", geo: "ღამურა", engHint: "echolocation", geoHint: "ექოლოკაცია"),
 
-    WordModel(eng: "Lizard", geo: "ხვლიკი", engHint: "bask", geoHint: "მზეზე"),
+    WordModel(eng: "Lizard", geo: "ხვლიკი", engHint: "bask", geoHint: "მცოცავი"),
     WordModel(eng: "Chameleon", geo: "ქამელეონი", engHint: "color-change", geoHint: "ფერი"),
     WordModel(eng: "Gecko", geo: "გეკო", engHint: "climb", geoHint: "ცოცვა"),
     WordModel(eng: "Salamander", geo: "სალამანდრა", engHint: "amphibian", geoHint: "ამფიბია"),
@@ -59,38 +59,36 @@ let animalsData: [WordModel] = [
     WordModel(eng: "Snail", geo: "ლოკოკინა", engHint: "slime", geoHint: "ლორწო"),
     
     WordModel(eng: "Worm", geo: "ჭია", engHint: "soil", geoHint: "ნიადაგი"),
-    WordModel(eng: "Butterfly", geo: "პეპელა", engHint: "nectar", geoHint: "ნექტარი"),
+    WordModel(eng: "Butterfly", geo: "პეპელა", engHint: "nectar", geoHint: "ფარფატი"),
 
-    WordModel(eng: "Bee", geo: "ფუტკარი", engHint: "honeycomb", geoHint: "ფარფლი"),
+    WordModel(eng: "Bee", geo: "ფუტკარი", engHint: "honeycomb", geoHint: "მშრომელი"),
     WordModel(eng: "Ant", geo: "ჭიანჭველა", engHint: "colony", geoHint: "კოლონია"),
     WordModel(eng: "Spider", geo: "ობობა", engHint: "web", geoHint: "ქსელი"),
     WordModel(eng: "Scorpion", geo: "მორიელი", engHint: "stinger", geoHint: "ნაკბენი"),
-    WordModel(eng: "Ladybug", geo: "ჭიამაია", engHint: "spots", geoHint: "ლაქები"),
+    WordModel(eng: "Ladybug", geo: "ჭიამაია", engHint: "spots", geoHint: "კოპლები"),
     WordModel(eng: "Dragonfly", geo: "ჭრიჭინა", engHint: "wings", geoHint: "ფრთები"),
     WordModel(eng: "Grasshopper", geo: "კალია", engHint: "jump", geoHint: "ხტუნვა"),
-    WordModel(eng: "Cricket", geo: "ჩხიკვი", engHint: "chirp", geoHint: "ჭრიჭინი"),
+
     WordModel(eng: "Mosquito", geo: "კოღო", engHint: "bite", geoHint: "ნაკბენი"),
     WordModel(eng: "Fly", geo: "ბუზი", engHint: "buzz", geoHint: "ზუზუნი"),
 
     WordModel(eng: "Wasp", geo: "კრაზანა", engHint: "nest", geoHint: "ბუდე"),
-    WordModel(eng: "Beetle", geo: "ხოჭო", engHint: "exoskeleton", geoHint: "ეგზოსკელეტი"),
+    
     WordModel(eng: "Centipede", geo: "ასფეხა", engHint: "legs", geoHint: "ფეხები"),
-    WordModel(eng: "Millipede", geo: "ორფეხა", engHint: "segments", geoHint: "სეგმენტები"),
     WordModel(eng: "Crab", geo: "კიბორჩხალა", engHint: "claws", geoHint: "კლანჭები"),
     WordModel(eng: "Shrimp", geo: "კრევეტი", engHint: "shellfish", geoHint: "ზღვის პროდუქტი"),
-    WordModel(eng: "Lobster", geo: "ომარი", engHint: "cuisine", geoHint: "სამზარეულო"),
-    WordModel(eng: "Starfish", geo: "ზღვის ვარსკვლავი", engHint: "arms", geoHint: "მკლავები"),
+    
+    WordModel(eng: "Starfish", geo: "ზღვის ვარსკვლავი", engHint: "arms", geoHint: "კიდურები"),
     WordModel(eng: "Seahorse", geo: "ზღვის ცხენი", engHint: "tail", geoHint: "კუდი"),
     WordModel(eng: "Seal", geo: "სელაპი", engHint: "blubber", geoHint: "ცხიმი"),
 
-    WordModel(eng: "Walrus", geo: "მორჟი", engHint: "tusks", geoHint: "ეშვები"),
-    WordModel(eng: "Penguin", geo: "პინგვინი", engHint: "flightless", geoHint: "უფრთო"),
+    
+    
     WordModel(eng: "Polar Bear", geo: "პოლარული დათვი", engHint: "arctic", geoHint: "არქტიკა"),
     WordModel(eng: "Reindeer", geo: "ჩრდილოეთის ირემი", engHint: "sleigh", geoHint: "მარხილი"),
     WordModel(eng: "Camel", geo: "აქლემი", engHint: "hump", geoHint: "კუზი"),
-    WordModel(eng: "Llama", geo: "ლამა", engHint: "spit", geoHint: "შხეფვა"),
-    WordModel(eng: "Alpaca", geo: "ალპაკა", engHint: "fiber", geoHint: "ბოჭკო"),
+    WordModel(eng: "Llama", geo: "ლამა", engHint: "spit", geoHint: "პანამა"),
+    
     WordModel(eng: "Gorilla", geo: "გორილა", engHint: "primate", geoHint: "პრიმატი"),
-    WordModel(eng: "Chimpanzee", geo: "შიმპანზე", engHint: "tool-use", geoHint: "იარაღი"),
-    WordModel(eng: "Orangutan", geo: "ორანგუტანი", engHint: "red-hair", geoHint: "წითელი თმა")
+    WordModel(eng: "Chimpanzee", geo: "შიმპანზე", engHint: "tool-use", geoHint: "ჭკვიანი")
 ]

@@ -9,7 +9,7 @@ import Foundation
 
 let companiesLogosData: [WordModel] = [
     // ტექნოლოგია
-    WordModel(eng: "Apple", geo: "ეპლი", engHint: "Bitten", geoHint: "ნაკბეჩი"),
+    WordModel(eng: "Apple", geo: "ეფლი", engHint: "Bitten", geoHint: "ნაკბეჩი"),
     WordModel(eng: "Google", geo: "გუგლი", engHint: "Search", geoHint: "ძებნა"),
     WordModel(eng: "Microsoft", geo: "მაიკროსოფტი", engHint: "Windows", geoHint: "ფანჯრები"),
     WordModel(eng: "Samsung", geo: "სამსუნგი", engHint: "Galaxy", geoHint: "გალაქტიკა"),
@@ -26,10 +26,10 @@ let companiesLogosData: [WordModel] = [
     WordModel(eng: "Burger King", geo: "ბურგერ კინგი", engHint: "Crown", geoHint: "გვირგვინი"),
     WordModel(eng: "Starbucks", geo: "სტარბაქსი", engHint: "Mermaid", geoHint: "ქალთევზა"),
     WordModel(eng: "Nestle", geo: "ნესტლე", engHint: "Bird", geoHint: "ჩიტი"),
-    WordModel(eng: "Kellogg's", geo: "კელოგსი", engHint: "Rooster", geoHint: "მამალი"),
-    WordModel(eng: "Hershey's", geo: "ჰერშის", engHint: "Kiss", geoHint: "ამბორი"),
-    WordModel(eng: "Lay's", geo: "ლეისი", engHint: "Smile", geoHint: "ღიმილი"),
-    WordModel(eng: "Cadbury", geo: "ქედბერი", engHint: "Purple", geoHint: "იისფერი"),
+    
+    
+    WordModel(eng: "Lay's", geo: "ლეისი", engHint: "Messi", geoHint: "მესი"),
+    
 
     // ტანსაცმელი და მოდა
     WordModel(eng: "Nike", geo: "ნაიკი", engHint: "Swoosh", geoHint: "მოხრა"),
@@ -37,20 +37,18 @@ let companiesLogosData: [WordModel] = [
     WordModel(eng: "Puma", geo: "პუმა", engHint: "Cat", geoHint: "კატა"),
     WordModel(eng: "Reebok", geo: "რიბოკი", engHint: "Delta", geoHint: "სამკუთხედი"),
     WordModel(eng: "Gucci", geo: "გუჩი", engHint: "Interlocking", geoHint: "გადაჯაჭვული"),
-    WordModel(eng: "Louis Vuitton", geo: "ლუი ვიტონი", engHint: "Monogram", geoHint: "მონოგრამა"),
+    
     WordModel(eng: "Chanel", geo: "შანელი", engHint: "Double-C", geoHint: "ორი C"),
     WordModel(eng: "Versace", geo: "ვერსაჩე", engHint: "Medusa", geoHint: "მედუზა"),
-    WordModel(eng: "Zara", geo: "ზარა", engHint: "Fast", geoHint: "სწრაფი"),
     WordModel(eng: "H&M", geo: "H&M", engHint: "Letters", geoHint: "ასოები"),
 
     // ავტომობილები
     WordModel(eng: "Toyota", geo: "ტოიოტა", engHint: "Ovals", geoHint: "ოვალები"),
-    WordModel(eng: "BMW", geo: "ბე-ემ-ვე", engHint: "Propeller", geoHint: "ფრთა"),
+    WordModel(eng: "BMW", geo: "ბე-ემ-ვე", engHint: "Propeller", geoHint: "ასოები"),
     WordModel(eng: "Mercedes-Benz", geo: "მერსედეს-ბენცი", engHint: "Star", geoHint: "ვარსკვლავი"),
     WordModel(eng: "Audi", geo: "აუდი", engHint: "Rings", geoHint: "რგოლები"),
     WordModel(eng: "Volkswagen", geo: "ფოლკსვაგენი", engHint: "VW", geoHint: "ასოები"),
     WordModel(eng: "Ford", geo: "ფორდი", engHint: "Blue", geoHint: "ლურჯი"),
-    WordModel(eng: "Chevrolet", geo: "შევროლე", engHint: "Bowtie", geoHint: "ბაფთა"),
     WordModel(eng: "Ferrari", geo: "ფერარი", engHint: "Horse", geoHint: "ცხენი"),
     WordModel(eng: "Lamborghini", geo: "ლამბორჯინი", engHint: "Bull", geoHint: "ხარი"),
     WordModel(eng: "Porsche", geo: "პორშე", engHint: "Shield", geoHint: "ფარი"),

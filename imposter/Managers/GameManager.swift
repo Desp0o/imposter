@@ -19,7 +19,7 @@ final class GameManager {
   
   var categories: [CategoryModel] = [
     CategoryModel(id: 1, nameEng: "Everyday Objects", nameGeo: "ყოველდღიური", data: everydayObjectsData, isUnlocked: true),
-    CategoryModel(id: 2, nameEng: "Flora & Fauna", nameGeo: "ფლორა & ფაუნა", data: floraAndFaunaData, isUnlocked: true)
+    CategoryModel(id: 3, nameEng: "Animals", nameGeo: "ცხოველები", data: animalsData, isUnlocked: true),
   ]
   
   func generateRandomWord() -> WordModel? {

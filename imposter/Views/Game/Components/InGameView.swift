@@ -63,7 +63,7 @@ struct InGameView: View  {
             .padding(.horizontal, 5)
             .background(
               RoundedRectangle(cornerRadius: 6)
-                .fill(.mainPink)
+                .fill(.mainRed)
             )
           
           Text("starts the conversation")

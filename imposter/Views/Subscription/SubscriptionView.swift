@@ -29,7 +29,7 @@ struct Subscription: View {
           
           VStack(spacing: 12) {
             Text("Unlock Full Access")
-              .customFontSytle(color: .mainPink, weight: .bold, size: 20)
+              .customFontSytle(color: .mainRed, weight: .bold, size: 20)
             
             Text("Access all categories, features and no ADS!")
               .customFontSytle(weight: .semibold, size: 16)
@@ -72,7 +72,7 @@ struct Subscription: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .overlay {
                   if isMonthlyActive {
-                    RoundedRectangle(cornerRadius: 12).stroke(.mainPink, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: 12).stroke(.mainRed, lineWidth: 1)
                   }
                 }
               }
@@ -102,7 +102,7 @@ struct Subscription: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .overlay {
                   if !isMonthlyActive {
-                    RoundedRectangle(cornerRadius: 12).stroke(.mainPink, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: 12).stroke(.mainRed, lineWidth: 1)
                   }
                 }
               }
@@ -147,7 +147,7 @@ struct Subscription: View {
                   
                   .frame(height: 48)
                   .frame(maxWidth: .infinity)
-                  .background(.mainPink)
+                  .background(.mainRed)
                   .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .disabled(
@@ -165,7 +165,7 @@ struct Subscription: View {
                   }
                 } label: {
                   Text("Restore Subscription")
-                    .customFontSytle(color: .mainPink, weight: .bold, size: 16)
+                    .customFontSytle(color: .mainRed, weight: .bold, size: 16)
                 }
               }
             }
@@ -188,7 +188,7 @@ struct Subscription: View {
       if iapManager.isSyncingSub {
         ProgressView()
           .scaleEffect(2)
-          .tint(.mainPink)
+          .tint(.mainRed)
       }
     }
     .overlay(alignment: .topTrailing) {

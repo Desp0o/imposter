@@ -19,7 +19,7 @@ struct TogglerCustomComponent: View {
       Spacer()
       
       Toggle("", isOn: $value)
-        .tint(.mainPink)
+        .tint(.mainRed)
         .frame(width: 70)
     }
   }

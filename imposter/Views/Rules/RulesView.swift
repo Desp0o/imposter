@@ -44,7 +44,7 @@ struct RulesView: View {
           isRulesSheetVisible = false
         } label: {
           Image(systemName: IconsEnum.xmark.rawValue)
-            .foregroundStyle(.mainPink)
+            .foregroundStyle(.mainRed)
         }
       }
       
@@ -55,7 +55,7 @@ struct RulesView: View {
             
             HStack(alignment: .top, spacing: 10) {
               Text("\(index + 1)")
-                .customFontSytle(color: .mainPink, weight: .bold, size: 20)
+                .customFontSytle(color: .mainRed, weight: .bold, size: 20)
               
               Text(rule)
                 .customFontSytle()

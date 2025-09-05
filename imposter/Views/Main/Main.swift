@@ -140,12 +140,16 @@ struct Main: View {
               Button {
                 isSubscriptionVisible = true
               } label: {
-                Text("⭐️")
-                  .customFontSytle()
+                Image(systemName: "crown.fill")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 32, height: 32)
+                  .foregroundStyle(.mainBlack)
+                  .padding()
                   .frame(width: 52, height: 52)
                   .background(
                     RoundedRectangle(cornerRadius: 8)
-                      .fill(.mainPink)
+                      .fill(.mainRed)
                   )
               }
               
@@ -154,12 +158,13 @@ struct Main: View {
                   .toolbar(.hidden)
               } label: {
                 Text("Play")
-                  .customFontSytle(color: .mainBlack, weight: .bold, size: 20)
+                  .customFontSytle(color: .mainRed, weight: .bold, size: 20)
                   .frame(height: 52)
                   .frame(maxWidth: .infinity)
                   .background(
                     RoundedRectangle(cornerRadius: 8)
-                      .fill(.mainPink)
+                      .fill(.clear)
+                      .stroke(.mainRed, lineWidth: 1)
                   )
               }
             }

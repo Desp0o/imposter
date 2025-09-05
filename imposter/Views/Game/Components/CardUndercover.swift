@@ -31,17 +31,19 @@ struct CardUndercover: View {
         } else {
           VStack(spacing: 10) {
             Text("\(roles[curretnRole].rawValue)")
-              .customFontSytle(color: .red, weight: .bold, size: 26)
+              .customFontSytle(color: .mainBlack, weight: .bold, size: 26)
             
             if gameManager.isHintEnabled {
-              Text("Hint: \(randomWord?.geoHint ?? "")")
+              Text("\(appLanguage == .ka ? "მინიშნება" : "Hint"):  \(appLanguage == .ka ? randomWord?.geoHint ?? "" : randomWord?.eng ?? "")")
                 .customFontSytle(color: .mainWhite.opacity(0.8), weight: .semibold, size: 18)
             }
           }
         }
       }
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding()
     .padding(.bottom, 50)
+    .background(roles?[curretnRole].rawValue == "Imposter" ? .mainRed : .mainGray)
   }
 }

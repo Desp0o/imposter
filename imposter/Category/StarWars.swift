@@ -53,9 +53,7 @@ let starWarsData: [WordModel] = [
     WordModel(eng: "Obi-Wan", geo: "ობი-ვანი", engHint: "mentor", geoHint: "მენტორი"),
     WordModel(eng: "Kashyyyk", geo: "კაშიიიკი", engHint: "home", geoHint: "სახლი"),
     WordModel(eng: "Geonosis", geo: "ჯეონოზისი", engHint: "arena", geoHint: "არენა"),
-    WordModel(eng: "Dagobah", geo: "დაგობა", engHint: "swamp", geoHint: "ჭაობი"),
     WordModel(eng: "Dooku", geo: "დუკუ", engHint: "count", geoHint: "გრაფი"),
     WordModel(eng: "Grievous", geo: "გრიივუსი", engHint: "droid", geoHint: "დროიდი"),
-    WordModel(eng: "Maul", geo: "მოლი", engHint: "horns", geoHint: "რქები"),
     WordModel(eng: "Kylo Ren", geo: "კაილო რენი", engHint: "mask", geoHint: "ნიღაბი")
 ]

@@ -34,7 +34,7 @@ struct ImposterCount: View {
       {
         ForEach(1...imposterPossibleCount, id: \.self) { num in
           Text("\(num)")
-            .customFontSytle(color: .mainPink, weight: .bold, size: 24)
+            .customFontSytle(color: .mainRed, weight: .bold, size: 24)
         }
       }
       .pickerStyle(.wheel)
@@ -44,7 +44,7 @@ struct ImposterCount: View {
         isImposterAddSheetVisible = false
       } label: {
         Text("Confirm")
-          .customFontSytle(color: .mainPink, weight: .bold)
+          .customFontSytle(color: .mainRed, weight: .bold)
           .textCase(.uppercase)
           .frame(maxWidth: .infinity, maxHeight: 48)
           .overlay {

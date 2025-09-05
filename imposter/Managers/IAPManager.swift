@@ -61,8 +61,10 @@ final class IAPManager {
         await transaction.finish()
         
       case .userCancelled:
+        isSyncingSub = false
         purchaseCanceled = true
       default:
+        isSyncingSub = false
         break
       }
     } catch {

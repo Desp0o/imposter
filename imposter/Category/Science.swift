@@ -35,7 +35,6 @@ let scienceWordsData: [WordModel] = [
     WordModel(eng: "Algorithm", geo: "ალგორითმი", engHint: "process", geoHint: "პროცესი"),
     WordModel(eng: "Thermodynamics", geo: "თერმოდინამიკა", engHint: "heat", geoHint: "სითბო"),
     WordModel(eng: "Quantum", geo: "კვანტური", engHint: "discrete", geoHint: "განცალკევებული"),
-    WordModel(eng: "Relativity", geo: "რელატივისტობა", engHint: "frames", geoHint: "კადრები"),
     WordModel(eng: "Nucleus", geo: "ბირთვი", engHint: "center", geoHint: "ცენტრი"),
     WordModel(eng: "Plasma", geo: "პლაზმა", engHint: "state", geoHint: "მდგომარეობა")
 ]

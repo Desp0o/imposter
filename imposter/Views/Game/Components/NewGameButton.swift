@@ -15,13 +15,13 @@ struct NewGameButton: View {
       dismiss()
     } label: {
       Text("New Game")
-        .customFontSytle(color: .mainPink, weight: .bold, size: 20)
+        .customFontSytle(color: .mainRed, weight: .bold, size: 20)
         .padding(.vertical, 10)
         .padding(.horizontal, 20)
         .background(
           RoundedRectangle(cornerRadius: 12)
             .fill(.clear)
-            .stroke(.mainPink, lineWidth: 1)
+            .stroke(.mainRed, lineWidth: 1)
         )
     }
   }

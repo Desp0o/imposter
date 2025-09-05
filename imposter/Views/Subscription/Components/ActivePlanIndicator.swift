@@ -12,7 +12,7 @@ struct ActivePlanIndicator: View {
   var body: some View {
     HStack {
       Text("⭐️ YOUR PLAN")
-        .customFontSytle(color: .mainPink, weight: .semibold, size: 12)
+        .customFontSytle(color: .mainRed, weight: .semibold, size: 12)
         .padding(.vertical, 3)
         .padding(.horizontal, 5)
         .background(

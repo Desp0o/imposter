@@ -11,8 +11,7 @@ let currentSub = UserDefaults.standard.string(forKey: AppStorageEnum.sub.rawValu
 
 let CategoryArray = [
   CategoryModel(id: 1, nameEng: "Everyday Objects", nameGeo: "ყოველდღიური", data: everydayObjectsData, isUnlocked: true),
-  CategoryModel(id: 2, nameEng: "Flora & Fauna", nameGeo: "ფლორა & ფაუნა", data: floraAndFaunaData, isUnlocked: true),
-  CategoryModel(id: 3, nameEng: "Animals", nameGeo: "ცხოველები", data: animalsData, isUnlocked: currentSub != nil),
+  CategoryModel(id: 3, nameEng: "Animals", nameGeo: "ცხოველები", data: animalsData, isUnlocked: true),
   CategoryModel(id: 4, nameEng: "Cities & Countries", nameGeo: "ქალაქები და ქვეყნები", data: countriesCitiesData, isUnlocked: currentSub != nil),
   CategoryModel(id: 5, nameEng: "Feelings & Emotions", nameGeo: "გრძნობები და ემოციები", data: emotionsData, isUnlocked: currentSub != nil),
   CategoryModel(id: 6, nameEng: "Food", nameGeo: "საჭმელი და სასმელი", data: foodAndDrinksData, isUnlocked: currentSub != nil),

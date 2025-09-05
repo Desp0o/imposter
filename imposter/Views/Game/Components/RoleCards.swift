@@ -24,39 +24,40 @@ struct RoleCards: View {
   var body: some View {
     VStack(spacing: 20) {
       Text("Player \(curretnRole + 1)")
-        .customFontSytle(color: .mainBlack, weight: .black, size: 24)
+        .customFontSytle(color: .mainRed, weight: .black, size: 24)
       
       Text("Do not tell the word to other players.")
-        .customFontSytle(color: .mainBlack, weight: .thin, size: 16)
+        .customFontSytle(color: .mainRed, weight: .thin, size: 16)
         .multilineTextAlignment(.center)
       
       Spacer().frame(height: 200)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding()
-    .background(.mainPink)
+    .background(.mainBlack)
     .overlay(alignment: .bottom) {
       if isAssigned {
         Button {
           setupRoles()
         } label: {
           Text(curretnRole == (roles?.count ?? 0) - 1 ? "Play" : "Next Player")
-            .customFontSytle()
+            .customFontSytle(color: .mainRed)
             .padding()
             .padding(.horizontal, 60)
             .background(
               RoundedRectangle(cornerRadius: 12)
-                .fill(.mainBlack)
+                .fill(.clear)
+                .stroke(.mainRed, lineWidth: 1)
             )
         }
         .offset(y: -200)
       } else {
         VStack(spacing: 10) {
           Image(systemName: IconsEnum.arrowUp.rawValue)
-            .foregroundStyle(.mainBlack)
+            .foregroundStyle(.mainRed)
           
           Text("Slide up to reveal")
-            .customFontSytle(color: .mainBlack)
+            .customFontSytle(color: .mainRed)
         }
         .offset(y: -50)
       }
@@ -97,7 +98,7 @@ struct RoleCards: View {
           Image(systemName: IconsEnum.arrowLeft.rawValue)
             .padding(.horizontal, 30)
             .padding(.vertical, 20)
-            .foregroundStyle(.mainBlack)
+            .foregroundStyle(.mainRed)
         }
         
         Spacer()

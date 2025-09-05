@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AC119E4B2E5DA2A700856B73 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = AC119E4A2E5DA2A700856B73 /* GoogleMobileAds */; };
+		AC258CA82E6995A4007DD232 /* store.storekit in Resources */ = {isa = PBXBuildFile; fileRef = AC258CA72E6995A4007DD232 /* store.storekit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC258CA72E6995A4007DD232 /* store.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = store.storekit; sourceTree = "<group>"; };
 		AC78CB7C2E525ECF007DAAD2 /* imposter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imposter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,6 +52,7 @@
 		AC78CB732E525ECF007DAAD2 = {
 			isa = PBXGroup;
 			children = (
+				AC258CA72E6995A4007DD232 /* store.storekit */,
 				AC78CB7E2E525ECF007DAAD2 /* imposter */,
 				AC78CB7D2E525ECF007DAAD2 /* Products */,
 			);
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC258CA82E6995A4007DD232 /* store.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +299,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.despo.imposter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -331,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.despo.imposter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

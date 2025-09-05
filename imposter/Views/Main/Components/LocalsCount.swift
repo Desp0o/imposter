@@ -19,7 +19,7 @@ struct LocalsCount: View {
       )) {
         ForEach(3...10, id: \.self) { num in
           Text("\(num)")
-            .customFontSytle(color: .mainPink, weight: .bold, size: 24)
+            .customFontSytle(color: .mainRed, weight: .bold, size: 24)
         }
       }
       .pickerStyle(.wheel)
@@ -29,7 +29,7 @@ struct LocalsCount: View {
         isLocalsAddSheetVisible = false
       } label: {
         Text("Confirm")
-          .customFontSytle(color: .mainPink, weight: .bold)
+          .customFontSytle(color: .mainRed, weight: .bold)
           .textCase(.uppercase)
           .frame(maxWidth: .infinity, maxHeight: 48)
           .overlay {

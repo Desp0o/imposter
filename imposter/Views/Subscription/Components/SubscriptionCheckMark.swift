@@ -21,7 +21,7 @@ struct SubscriptionCheckMark: View {
           }
       } else {
         Image(systemName: IconsEnum.checkMark.rawValue)
-          .foregroundStyle(.mainPink)
+          .foregroundStyle(.mainRed)
       }
     }
   }

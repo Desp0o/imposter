@@ -123,7 +123,7 @@ struct SettingsView: View {
           dismiss()
         } label: {
           Image(systemName: IconsEnum.arrowLeft.rawValue)
-            .foregroundStyle(.mainPink)
+            .foregroundStyle(.mainRed)
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 30)

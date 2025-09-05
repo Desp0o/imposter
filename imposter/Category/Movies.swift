@@ -11,15 +11,15 @@ let cinematographyData: [WordModel] = [
     WordModel(eng: "Director", geo: "რეჟისორი", engHint: "vision", geoHint: "ხედვა"),
     WordModel(eng: "Actor", geo: "მსახიობი", engHint: "portrayal", geoHint: "განსახიერება"),
     WordModel(eng: "Screenplay", geo: "სცენარი", engHint: "narrative", geoHint: "თხრობა"),
-    WordModel(eng: "Producer", geo: "პროდიუსერი", engHint: "funding", geoHint: "დაფინანსება"),
+    
     WordModel(eng: "Camera", geo: "კამერა", engHint: "capture", geoHint: "დაფიქსირება"),
-    WordModel(eng: "Editing", geo: "მონტაჟი", engHint: "sequence", geoHint: "თანმიმდევრობა"),
+    WordModel(eng: "Editing", geo: "მონტაჟი", engHint: "sequence", geoHint: "დაჭრა"),
     WordModel(eng: "Soundtrack", geo: "საუნდტრეკი", engHint: "melody", geoHint: "მელოდია"),
-    WordModel(eng: "Lighting", geo: "განათება", engHint: "mood", geoHint: "განწყობა"),
+    
     WordModel(eng: "Genre", geo: "ჟანრი", engHint: "category", geoHint: "კატეგორია"),
     WordModel(eng: "Blockbuster", geo: "ბლოკბასტერი", engHint: "hit", geoHint: "ჰიტი"),
     WordModel(eng: "Oscar", geo: "ოსკარი", engHint: "award", geoHint: "ჯილდო"),
-    WordModel(eng: "Premiere", geo: "პრემიერა", engHint: "debut", geoHint: "დებიუტი"),
+    
     WordModel(eng: "Dialogue", geo: "დიალოგი", engHint: "conversation", geoHint: "საუბარი"),
     WordModel(eng: "Sequel", geo: "სიქუელი", engHint: "continuation", geoHint: "გაგრძელება"),
     WordModel(eng: "Trilogy", geo: "ტრილოგია", engHint: "three", geoHint: "სამი"),
@@ -33,14 +33,12 @@ let cinematographyData: [WordModel] = [
     WordModel(eng: "Horror", geo: "საშინელებათა", engHint: "fear", geoHint: "შიში"),
     WordModel(eng: "Western", geo: "ვესტერნი", engHint: "cowboys", geoHint: "კოვბოები"),
     WordModel(eng: "Musical", geo: "მიუზიკლი", engHint: "songs", geoHint: "სიმღერები"),
-    WordModel(eng: "Critique", geo: "კრიტიკა", engHint: "review", geoHint: "მიმოხილვა"),
-    WordModel(eng: "Audience", geo: "აუდიტორია", engHint: "viewers", geoHint: "მაყურებლები"),
-    WordModel(eng: "Plot", geo: "სიუჟეტი", engHint: "storyline", geoHint: "ისტორია"),
-    WordModel(eng: "Scene", geo: "კადრი", engHint: "moment", geoHint: "მომენტი"),
-    WordModel(eng: "Filming", geo: "გადაღება", engHint: "shooting", geoHint: "სროლა"),
+    
+    
+    
     WordModel(eng: "The Godfather", geo: "ნათლია", engHint: "mafia", geoHint: "მაფია"),
     WordModel(eng: "Shawshank Redemption", geo: "გაქცევა შოუშენკიდან", engHint: "hope", geoHint: "იმედი"),
-    WordModel(eng: "Pulp Fiction", geo: "მაკულატურა", engHint: "nonlinear", geoHint: "არაწრფივი"),
+    WordModel(eng: "Pulp Fiction", geo: "მაკულატურა", engHint: "nonlinear", geoHint: "სამუელი"),
     WordModel(eng: "The Dark Knight", geo: "ბნელი რაინდი", engHint: "hero", geoHint: "გმირი"),
     WordModel(eng: "Forrest Gump", geo: "ფორესტ გამპი", engHint: "life", geoHint: "ცხოვრება"),
     WordModel(eng: "Inception", geo: "დასაწყისი", engHint: "dreams", geoHint: "სიზმრები"),
@@ -50,8 +48,8 @@ let cinematographyData: [WordModel] = [
     WordModel(eng: "Titanic", geo: "ტიტანიკი", engHint: "ship", geoHint: "გემი"),
     WordModel(eng: "Avatar", geo: "ავატარი", engHint: "blue", geoHint: "ლურჯი"),
     WordModel(eng: "Joker", geo: "ჯოკერი", engHint: "villain", geoHint: "ბოროტმოქმედი"),
-    WordModel(eng: "Parasite", geo: "პარაზიტი", engHint: "class", geoHint: "კლასი"),
-    WordModel(eng: "Whiplash", geo: "უიპლეში", engHint: "jazz", geoHint: "ჯაზი"),
+    
+    
     WordModel(eng: "La La Land", geo: "ლა ლა ლენდი", engHint: "musical", geoHint: "მუსიკალური"),
     WordModel(eng: "Roma", geo: "რომა", engHint: "black&white", geoHint: "შავ-თეთრი"),
     WordModel(eng: "Her", geo: "მისი", engHint: "AI", geoHint: "ხელოვნური ინტელექტი"),
@@ -59,7 +57,7 @@ let cinematographyData: [WordModel] = [
     WordModel(eng: "Blade Runner 2049", geo: "ბლეიდ რანერი 2049", engHint: "replicant", geoHint: "რეპლიკანტი"),
     WordModel(eng: "Dune", geo: "დიუნი", engHint: "desert", geoHint: "უდაბნო"),
     WordModel(eng: "1917", geo: "1917", engHint: "war", geoHint: "ომი"),
-    WordModel(eng: "Green Book", geo: "მწვანე წიგნი", engHint: "roadtrip", geoHint: "მოგზაურობა"),
+    WordModel(eng: "Green Book", geo: "მწვანე წიგნი", engHint: "roadtrip", geoHint: "წიგნი"),
     WordModel(eng: "Birdman", geo: "ადამიანი ჩიტი", engHint: "theatre", geoHint: "თეატრი"),
     WordModel(eng: "The Revenant", geo: "გადარჩენილი", engHint: "survival", geoHint: "გადარჩენა"),
     WordModel(eng: "Mad Max: Fury Road", geo: "შეშლილი მაქსი: მრისხანების გზა", engHint: "post-apocalyptic", geoHint: "პოსტ-აპოკალიფსური"),

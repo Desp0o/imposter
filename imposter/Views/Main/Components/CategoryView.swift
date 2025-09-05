@@ -32,8 +32,7 @@ struct CategoryView: View {
             HStack {
               Text(appLanguage == .ka ? category.nameGeo : category.nameEng)
                 .customFontSytle(
-                  color: gameManager.categories.contains(where: { $0.id == category.id })
-                  ? .mainBlack : .mainWhite,
+                  color: .mainWhite,
                   weight: .semibold
                 )
               
@@ -41,33 +40,26 @@ struct CategoryView: View {
             }
             .padding()
             .background(
-                gameManager.categories.contains(where: { $0.id == category.id }) ? .mainPink : .clear
+              gameManager.categories.contains(where: { $0.id == category.id }) ? .mainGray : .clear
             )
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay {
               RoundedRectangle(cornerRadius: 8)
-                .stroke(.mainPink, lineWidth: 1)
+                .stroke(.mainGray, lineWidth: 1)
             }
             .if(currentSubscription == nil && category.isUnlocked == false) { view in
               view.overlay(alignment: .trailing) {
                 Image(systemName: IconsEnum.lock.rawValue)
-                  .foregroundStyle(.mainPink)
+                  .foregroundStyle(.mainRed)
                   .offset(x: -15)
               }
             }
             .contentShape(Rectangle())
             .onTapGesture {
-              if currentSubscription != nil {
-                if !gameManager.categories.contains(category) {
-                  withAnimation(.smooth) {
-                    gameManager.categories.append(category)
-                  }
-                } else {
-                  withAnimation(.smooth) {
-                    guard gameManager.categories.count > 1 else { return }
-                    gameManager.categories.removeAll { category.id == $0.id }
-                  }
-                }
+              if category.id == 1 || category.id == 3 {
+                selectCategory(category: category)
+              } else if currentSubscription != nil {
+                selectCategory(category: category)
               }
             }
           }
@@ -87,5 +79,22 @@ struct CategoryView: View {
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding(.top, 20)
     .background(.mainBlack)
+  }
+  
+  
+  private func selectCategory(category: CategoryModel) {
+    let generator = UIImpactFeedbackGenerator(style: .medium)
+    generator.impactOccurred()
+    
+    if !gameManager.categories.contains(category) {
+      withAnimation(.snappy(duration: 0.2)) {
+        gameManager.categories.append(category)
+      }
+    } else {
+      withAnimation(.snappy(duration: 0.2)) {
+        guard gameManager.categories.count > 1 else { return }
+        gameManager.categories.removeAll { category.id == $0.id }
+      }
+    }
   }
 }

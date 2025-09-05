@@ -27,7 +27,7 @@ struct RevealedRolesAndWord: View {
             .padding(.vertical, 3)
             .background(
               RoundedRectangle(cornerRadius: 6)
-                .fill(.mainPink)
+                .fill(.mainRed)
             )
         }
       }
@@ -39,12 +39,12 @@ struct RevealedRolesAndWord: View {
               .customFontSytle()
             
             Text("Player \(index + 1)")
-              .customFontSytle(color: .mainWhite, size: 18)
+              .customFontSytle(color: .mainBlack, size: 18)
               .padding(.vertical, 3)
               .padding(.horizontal, 5)
               .background(
                 RoundedRectangle(cornerRadius: 6)
-                  .fill(.red)
+                  .fill(.mainRed)
               )
           }
         }
